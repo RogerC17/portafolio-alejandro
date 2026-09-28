@@ -1,6 +1,7 @@
 import { SocialReelCarousel } from "@/components/home/SocialReelCarousel"
 import { TextLink } from "@/components/ui/Button"
 import { SectionLabel } from "@/components/ui/SectionLabel"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { SocialOrbs } from "@/components/ui/SocialOrbs"
 import { contactChannelNote } from "@/data/contact"
 import { CONTACT_CTA, CONTACT_QUOTE, CONTACT_TITLE } from "@/data/home"
@@ -21,7 +22,10 @@ export function ContactCTA({ asPage = false }: ContactCTAProps) {
       }`}
     >
       <div className="editorial-shell items-start">
-        <div className="col-span-4 md:col-span-8 lg:col-span-5">
+        <ScrollReveal
+          className="col-span-4 md:col-span-8 lg:col-span-5"
+          distance={56}
+        >
           {asPage ? null : <SectionLabel index="[07]" />}
           <blockquote className="mt-[var(--space-sm)] font-serif text-[clamp(1.5rem,1.6vw+1rem,2.5rem)] font-normal italic leading-[1.2] text-foreground">
             {CONTACT_QUOTE}
@@ -41,10 +45,14 @@ export function ContactCTA({ asPage = false }: ContactCTAProps) {
           <div className="mt-[var(--space-xl)]">
             <SocialOrbs size="lg" labeled />
           </div>
-        </div>
-        <div className="col-span-4 mt-[var(--space-2xl)] md:col-span-8 lg:col-span-7 lg:mt-0">
+        </ScrollReveal>
+        <ScrollReveal
+          className="col-span-4 mt-[var(--space-2xl)] md:col-span-8 lg:col-span-7 lg:mt-0"
+          delay={0.12}
+          distance={64}
+        >
           <SocialReelCarousel />
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   )

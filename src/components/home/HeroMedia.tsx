@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { HERO_MEDIA } from "@/data/home"
 
+/** Media del Hero: solo parallax de scroll (sin seguimiento del cursor). */
 export function HeroMedia() {
   const stageRef = useRef<HTMLDivElement>(null)
 
@@ -11,58 +12,40 @@ export function HeroMedia() {
     const stage = stageRef.current
     if (!stage) return
 
+    const section = stage.closest<HTMLElement>(".hero")
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        stage.dataset.depth = entry.isIntersecting ? "live" : "paused"
-      },
-      { threshold: 0.12 },
-    )
-
-    observer.observe(stage)
-
-    const onEnter = () => {
-      stage.dataset.pointer = "on"
+    let raf = 0
+    const syncScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        if (!section) return
+        if (motionQuery.matches) {
+          section.style.setProperty("--hero-scroll", "0")
+          return
+        }
+        const rect = section.getBoundingClientRect()
+        const travel = Math.max(1, rect.height - window.innerHeight * 0.35)
+        const raw = Math.min(1, Math.max(0, -rect.top / travel))
+        section.style.setProperty("--hero-scroll", raw.toFixed(4))
+      })
     }
 
-    const resetPointer = () => {
-      stage.dataset.pointer = "off"
-      stage.style.setProperty("--hero-px", "0")
-      stage.style.setProperty("--hero-py", "0")
-    }
-
-    const onMove = (event: PointerEvent) => {
-      if (motionQuery.matches || event.pointerType === "touch") return
-
-      stage.dataset.pointer = "on"
-
-      const rect = stage.getBoundingClientRect()
-      if (rect.width === 0 || rect.height === 0) return
-
-      const x = (event.clientX - rect.left) / rect.width - 0.5
-      const y = (event.clientY - rect.top) / rect.height - 0.5
-      stage.style.setProperty("--hero-px", x.toFixed(4))
-      stage.style.setProperty("--hero-py", y.toFixed(4))
-    }
-
-    stage.addEventListener("pointerenter", onEnter)
-    stage.addEventListener("pointermove", onMove)
-    stage.addEventListener("pointerleave", resetPointer)
+    window.addEventListener("scroll", syncScroll, { passive: true })
+    window.addEventListener("resize", syncScroll, { passive: true })
+    syncScroll()
 
     return () => {
-      observer.disconnect()
-      stage.removeEventListener("pointerenter", onEnter)
-      stage.removeEventListener("pointermove", onMove)
-      stage.removeEventListener("pointerleave", resetPointer)
+      cancelAnimationFrame(raf)
+      window.removeEventListener("scroll", syncScroll)
+      window.removeEventListener("resize", syncScroll)
     }
   }, [])
 
   return (
     <div
       ref={stageRef}
-      data-depth="live"
-      className="hero-media relative h-full min-h-full w-full origin-[center_bottom] lg:origin-[right_bottom]"
+      className="hero-media relative h-full min-h-full w-full origin-center lg:origin-center"
     >
       <div className="hero-depth-plate">
         <Image
@@ -71,10 +54,11 @@ export function HeroMedia() {
           fill
           preload
           fetchPriority="high"
-          sizes="(max-width: 1023px) 100vw, 46vw"
+          sizes="(max-width: 1023px) 100vw, 54vw"
           className="hero-cutout"
         />
       </div>
+      <div className="hero-cine-veil" aria-hidden="true" />
     </div>
   )
 }

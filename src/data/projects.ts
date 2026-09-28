@@ -25,7 +25,8 @@ export const projectsLead =
   "Especiales Enlace Trece — los episodios más cercanos a gobernanza digital, tecnología y ciudadanía — y el archivo completo del canal SoyAlejo4.0."
 
 export function youtubeThumb(videoId: string) {
-  return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+  // maxresdefault is 1280×720 when available; hqdefault is only 480×360.
+  return `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
 }
 
 export const projects: Project[] = [

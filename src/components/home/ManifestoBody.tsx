@@ -1,6 +1,13 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion"
+import { useRef } from "react"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import {
   MANIFESTO_AXES,
   MANIFESTO_QUOTE_LINES,
@@ -11,29 +18,41 @@ const EASE_OUT = [0.16, 1, 0.3, 1] as const
 
 export function ManifestoBody() {
   const reduceMotion = useReducedMotion()
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  })
+  const quoteY = useTransform(
+    scrollYProgress,
+    [0.15, 0.55],
+    reduceMotion ? [0, 0] : [36, -16],
+  )
 
   return (
-    <motion.div
+    <div
+      ref={ref}
       className="col-span-4 mt-[var(--space-md)] flex flex-col gap-[var(--space-lg)] md:col-span-6 md:mt-0 lg:col-span-10 lg:col-start-3"
-      initial={reduceMotion ? false : { y: 12 }}
-      whileInView={{ y: 0 }}
-      viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.5, ease: EASE_OUT }}
     >
-      <h2
-        id="manifiesto-heading"
-        className="font-serif text-[clamp(1.75rem,2.2vw+1rem,3.25rem)] font-normal italic leading-[1.2] text-foreground"
-      >
-        {MANIFESTO_QUOTE_LINES.map((line) => (
-          <span key={line} className="block">
-            {line}
-          </span>
-        ))}
-      </h2>
+      <ScrollReveal distance={64}>
+        <motion.h2
+          id="manifiesto-heading"
+          style={{ y: quoteY }}
+          className="font-serif text-[clamp(1.85rem,2.6vw+1rem,3.5rem)] font-normal italic leading-[1.15] text-foreground"
+        >
+          {MANIFESTO_QUOTE_LINES.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </motion.h2>
+      </ScrollReveal>
 
-      <p className="editorial-measure text-[1rem] leading-[1.6] text-foreground">
-        {MANIFESTO_SUPPORT}
-      </p>
+      <ScrollReveal delay={0.12} distance={40}>
+        <p className="editorial-measure text-[1rem] leading-[1.6] text-foreground">
+          {MANIFESTO_SUPPORT}
+        </p>
+      </ScrollReveal>
 
       <ul className="flex flex-wrap gap-x-5 gap-y-2">
         {MANIFESTO_AXES.map((axis, index) => {
@@ -43,12 +62,12 @@ export function ManifestoBody() {
           const label = (
             <motion.span
               className="relative"
-              initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+              initial={reduceMotion ? false : { opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.4 }}
               transition={{
-                duration: reduceMotion ? 0.15 : 0.4,
-                delay: reduceMotion ? 0 : index * 0.05,
+                duration: reduceMotion ? 0.15 : 0.55,
+                delay: reduceMotion ? 0 : 0.15 + index * 0.06,
                 ease: EASE_OUT,
               }}
             >
@@ -70,6 +89,6 @@ export function ManifestoBody() {
           )
         })}
       </ul>
-    </motion.div>
+    </div>
   )
 }

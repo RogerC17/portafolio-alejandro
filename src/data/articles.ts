@@ -48,7 +48,7 @@ export const articles: Article[] = [
       "Bajo la dirección de Alejandro Linares, Canal Trece transformó su modelo de televisión pública.",
     date: "10 de abril de 2026",
     dateIso: "2026-04-10",
-    image: "/images/ideas/television-publica.webp",
+    image: "/images/press/forbes.webp",
     slug: "television-publica-con-proposito",
     author: SITE_NAME,
     content: [

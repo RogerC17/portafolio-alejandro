@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { TextLink } from "@/components/ui/Button"
-import { RevealImage } from "@/components/ui/RevealImage"
 import { SectionLabel } from "@/components/ui/SectionLabel"
+import { ScrollReveal, ScrollRevealItem } from "@/components/ui/ScrollReveal"
+import { PublicationBook3D } from "@/components/home/PublicationBook3D"
 import {
   publicationAuthorsLabel,
   publications,
@@ -15,12 +15,12 @@ export function Publications() {
       aria-labelledby="publicaciones-heading"
       className="scroll-mt-[var(--header-offset)] border-t border-[var(--border)] py-[var(--space-3xl)]"
     >
-      <div className="editorial-shell">
+      <ScrollReveal className="editorial-shell" distance={52}>
         <div className="col-span-4 lg:col-span-12">
           <SectionLabel index="[05]" />
           <h2
             id="publicaciones-heading"
-            className="mt-[var(--space-sm)] text-[clamp(2rem,2.4vw+1rem,3.25rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.04em]"
+            className="home-section-display mt-[var(--space-sm)]"
           >
             Publicaciones
           </h2>
@@ -28,11 +28,10 @@ export function Publications() {
         <div className="col-span-4 mt-[var(--space-md)] lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:items-end">
           <TextLink href="/publicaciones">Ver publicaciones</TextLink>
         </div>
-      </div>
+      </ScrollReveal>
 
       <div className="mt-[var(--space-2xl)]">
         {publications.map((publication, index) => {
-          const cover = publication.cover
           const provenance = [
             publicationAuthorsLabel(publication.authors),
             publication.publisher,
@@ -41,58 +40,45 @@ export function Publications() {
             .join(" · ")
 
           return (
-            <article
-              key={publication.slug}
-              className="border-t border-[var(--border)]"
-            >
-              <div className="editorial-shell items-center py-[var(--space-xl)]">
-                <div className="relative col-span-4 min-h-[14rem] overflow-hidden bg-surface lg:col-span-3 lg:min-h-[16rem]">
-                  {cover ? (
-                    <div className="archive-item absolute inset-0">
-                      <div className="archive-media absolute inset-0 flex origin-center items-center justify-center p-[var(--space-md)]">
-                        <Image
-                          src={cover}
-                          alt=""
-                          fill
-                          sizes="(max-width: 1023px) 100vw, 25vw"
-                          className="object-contain p-[var(--space-md)]"
-                        />
-                      </div>
-                    </div>
-                  ) : (
-                    <RevealImage
-                      alt=""
-                      year={publication.year}
-                      sizes="(max-width: 1023px) 100vw, 25vw"
-                    />
-                  )}
-                </div>
+            <ScrollRevealItem key={publication.slug} index={index} distance={56}>
+              <article className="border-t border-[var(--border)]">
+                <div className="editorial-shell items-center py-[var(--space-xl)]">
+                  <div className="col-span-4 flex justify-center lg:col-span-3 lg:justify-start">
+                    <PublicationBook3D publication={publication} />
+                  </div>
 
-                <div className="col-span-4 flex flex-col justify-center gap-[var(--space-sm)] pt-[var(--space-lg)] lg:col-span-8 lg:col-start-5 lg:pt-0">
-                  <p className="font-mono text-[0.6875rem] uppercase tabular-nums tracking-[0.16em] text-muted">
-                    {archiveLabel("Obra", index + 1)}
-                    <span aria-hidden="true"> · </span>
-                    {publication.year}
-                  </p>
-                  <h3 className="max-w-[16ch] text-[clamp(1.5rem,2vw+1rem,2.35rem)] font-extrabold leading-[1.05] tracking-[-0.03em]">
-                    {publication.title}
-                  </h3>
-                  <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
-                    {provenance}
-                  </p>
-                  <p className="editorial-measure text-[1.0625rem] leading-[1.5] text-foreground">
-                    {publication.description}
-                  </p>
-                  {publication.url ? (
-                    <div className="mt-[var(--space-sm)]">
-                      <TextLink href={publication.url}>
-                        {publication.ctaLabel}
-                      </TextLink>
-                    </div>
-                  ) : null}
+                  <div className="col-span-4 flex flex-col justify-center gap-[var(--space-sm)] pt-[var(--space-lg)] lg:col-span-8 lg:col-start-5 lg:pt-0">
+                    <p className="font-mono text-[0.6875rem] uppercase tabular-nums tracking-[0.16em] text-muted">
+                      {archiveLabel("Obra", index + 1)}
+                      <span aria-hidden="true"> · </span>
+                      {publication.year}
+                    </p>
+                    <h3 className="max-w-[16ch] text-[clamp(1.5rem,2vw+1rem,2.35rem)] font-extrabold leading-[1.05] tracking-[-0.03em]">
+                      {publication.title}
+                    </h3>
+                    <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
+                      {provenance}
+                    </p>
+                    <p className="editorial-measure text-[1.0625rem] leading-[1.5] text-foreground">
+                      {publication.description}
+                    </p>
+                    {publication.url ? (
+                      <div className="mt-[var(--space-sm)]">
+                        <TextLink href={publication.url}>
+                          {publication.ctaLabel}
+                        </TextLink>
+                      </div>
+                    ) : (
+                      <div className="mt-[var(--space-sm)]">
+                        <TextLink href={`/publicaciones/${publication.slug}`}>
+                          {publication.ctaLabel}
+                        </TextLink>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </ScrollRevealItem>
           )
         })}
       </div>

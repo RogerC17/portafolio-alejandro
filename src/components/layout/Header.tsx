@@ -111,6 +111,8 @@ export function Header() {
     return () => media.removeEventListener("change", onChange)
   }, [])
 
+  const transparentTop = pathname === "/" || pathname === "/proyectos"
+
   return (
     <>
       <a className="skip-link" href="#contenido">
@@ -118,7 +120,7 @@ export function Header() {
       </a>
       <header
         className={`fixed inset-x-0 top-0 z-[var(--z-header)] pt-[var(--safe-top)] border-b transition-[background-color,border-color,backdrop-filter] duration-300 ease-out ${
-          scrolled || menuOpen || pathname !== "/"
+          scrolled || menuOpen || !transparentTop
             ? "border-[var(--border)] bg-[var(--header-scrolled)] backdrop-blur-[6px]"
             : "border-transparent bg-transparent"
         }`}

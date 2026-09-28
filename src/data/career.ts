@@ -8,6 +8,8 @@ export interface CareerEvent {
   institution?: string
   description: string
   image?: string
+  /** CSS object/background position for portrait framing */
+  imagePosition?: string
   category: CareerCategory
   ongoing?: boolean
   featured?: boolean
@@ -56,6 +58,7 @@ export const careerEvents: CareerEvent[] = [
     description:
       "Eximido de preparatorios y becario para especialización. Consultorio jurídico atendiendo población desplazada.",
     image: "/images/career/2008-abogado.webp",
+    imagePosition: "center 24%",
     category: "Formación",
     featured: true,
   },
@@ -85,6 +88,7 @@ export const careerEvents: CareerEvent[] = [
     description:
       "Gestión reconocida por el gobierno nacional, la prensa, la Federación Colombiana de Municipios y Colombia Líder como una de las mejores del país para combatir la pobreza extrema. Administración pionera en gobierno abierto e innovación. Reconocido como uno de los mejores alcaldes de Colombia. Miembro de la Junta Directiva de la CAR y representante de los alcaldes ante el OCAD de Regalías y el Plan Departamental de Aguas.",
     image: "/images/career/2012-alcalde.webp",
+    imagePosition: "center 34%",
     category: "Cargos",
     featured: true,
   },
@@ -133,7 +137,8 @@ export const careerEvents: CareerEvent[] = [
     title: "Representante a la Cámara",
     institution: "Congreso de la República",
     description: "Representante a la Cámara, Congreso de la República.",
-    image: "/images/career/2021-camara.jpg",
+    image: "/images/career/2021-camara.webp",
+    imagePosition: "center 22%",
     category: "Cargos",
     featured: true,
   },
@@ -144,6 +149,7 @@ export const careerEvents: CareerEvent[] = [
     institution: "Universidad Externado de Colombia · Columbia University",
     description: "Tesis de grado: Camino a la Gobernanza Digital.",
     image: "/images/career/2022-maestria.webp",
+    imagePosition: "center 24%",
     category: "Formación",
     featured: true,
   },
@@ -156,6 +162,7 @@ export const careerEvents: CareerEvent[] = [
     description:
       "Gerente General de Canal Trece Colombia. Destacado por la revista Forbes por su modelo de liderazgo inspirador y resultados de gestión.",
     image: "/images/career/2022-trece.webp",
+    imagePosition: "center 24%",
     category: "Cargos",
     ongoing: true,
     featured: true,
@@ -167,7 +174,8 @@ export const careerEvents: CareerEvent[] = [
     institution: "Universidad Católica de Córdoba, Argentina",
     description:
       "Investigación: E-Gobernanza: Colombia hacia la Gobernanza Digital.",
-    image: "/images/career/2023-doctorado.jpg",
+    image: "/images/career/2023-doctorado.webp",
+    imagePosition: "center 18%",
     category: "Formación",
     ongoing: true,
     featured: true,

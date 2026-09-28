@@ -38,8 +38,8 @@ export const HERO_SECONDARY_CTA = {
 export const HERO_IMAGE = {
   src: "/images/alejandro/alejandro-linares.webp",
   alt: "Alejandro Linares",
-  width: 405,
-  height: 830,
+  width: 1600,
+  height: 2200,
 } as const
 
 export const HERO_MEDIA = {

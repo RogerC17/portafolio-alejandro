@@ -7,6 +7,7 @@ export interface Publication {
   year: string
   datePublished: string
   cover?: string
+  spineTitle?: string
   url?: string
   ctaLabel: string
   authors: string[]
@@ -32,10 +33,12 @@ export const publications: Publication[] = [
   {
     slug: "tecnologia-real-para-personas-reales",
     title: "Tecnología real para personas reales",
+    spineTitle: "Tecnología real",
     description:
       "El libro de Alejandro Linares sobre la revolución digital centrada en las personas.",
     year: "2026",
     datePublished: "2026",
+    cover: "/images/publications/tecnologia.webp",
     url: "https://www.infobae.com/america/inhouse/2026/08/02/tecnologia-real-para-personas-reales-el-libro-de-alejandro-linares-sobre-la-revolucion-digital-centrada-en-las-personas/",
     ctaLabel: "Leer",
     authors: [SITE_NAME],
@@ -45,10 +48,11 @@ export const publications: Publication[] = [
   {
     slug: "las-dos-caras-del-liderazgo",
     title: "Las dos caras del liderazgo",
+    spineTitle: "Las dos caras del liderazgo",
     description: "Libro de Alejandro Linares y Ever Arévalo.",
     year: "2026",
     datePublished: "2026",
-    cover: "/images/publications/liderazgo.png",
+    cover: "/images/publications/liderazgo.webp",
     url: "https://alejandrolinares.co/las-dos-caras-del-liderazgo/",
     ctaLabel: "Leer",
     authors: [SITE_NAME, "Ever Arévalo"],
@@ -56,6 +60,20 @@ export const publications: Publication[] = [
       "Dos visiones, un mismo propósito: formar líderes.",
       "Un líder no tiene que ser perfecto, pero sí debe estar dispuesto a crecer.",
     ],
+  },
+  {
+    slug: "enlace-digital",
+    title: "Enlace digital",
+    spineTitle: "Enlace digital",
+    description:
+      "Tecnología sin tecnicismos: una guía para acercar la innovación a la vida cotidiana.",
+    year: "2026",
+    datePublished: "2026",
+    cover: "/images/publications/enlace-digital.webp",
+    ctaLabel: "Leer",
+    authors: [SITE_NAME],
+    publisher: "Planeta",
+    content: ["Tecnología sin tecnicismos. Publicado por Planeta."],
   },
 ]
 

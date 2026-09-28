@@ -1,5 +1,10 @@
-import Image from "next/image"
+"use client"
+
+import { motion, useReducedMotion } from "framer-motion"
 import { focusAreas, type FocusArea } from "@/data/focus-areas"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
+
+const EASE = [0.16, 1, 0.3, 1] as const
 
 export function FocusAreas() {
   return (
@@ -10,25 +15,18 @@ export function FocusAreas() {
     >
       <div className="border-t border-[var(--border)] py-[var(--space-lg)] lg:py-[var(--space-xl)]">
         <div className="editorial-shell">
-          <div className="col-span-4 md:col-span-8">
-            <h2
-              id="areas-heading"
-              className="text-[clamp(2rem,2.4vw+1rem,3.25rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.04em]"
-            >
+          <ScrollReveal className="col-span-4 md:col-span-8" distance={48}>
+            <h2 id="areas-heading" className="home-section-display">
               Áreas de trabajo
             </h2>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
 
       <div className="relative border-t border-[var(--border)]">
-        <div className="editorial-shell items-start gap-y-[var(--space-2xl)] py-[var(--space-2xl)] lg:gap-y-[var(--space-3xl)] lg:py-[var(--space-3xl)]">
-          {focusAreas.map((area) => (
-            <FocusCard
-              key={area.id}
-              area={area}
-              className="col-span-4 md:col-span-4 lg:col-span-3"
-            />
+        <div className="focus-disc-grid">
+          {focusAreas.map((area, index) => (
+            <FocusDisc key={area.id} area={area} index={index} />
           ))}
         </div>
         <span
@@ -40,51 +38,49 @@ export function FocusAreas() {
   )
 }
 
-function FocusCard({
-  area,
-  className,
-}: {
-  area: FocusArea
-  className: string
-}) {
-  return (
-    <article
-      id={area.id}
-      tabIndex={0}
-      className={`focus-card scroll-mt-[var(--header-offset)] outline-none ${className}`}
-    >
-      <div className="focus-card-slide focus-card-slide--media">
-        <div className="focus-card-media focus-stripe-media relative h-full w-full overflow-hidden bg-surface">
-          <Image
-            src={area.image}
-            alt={area.alt}
-            fill
-            sizes="(max-width: 767px) 92vw, (max-width: 1023px) 44vw, 22vw"
-            className="object-cover"
-            style={{ objectPosition: area.objectPosition }}
-          />
-          <span
-            aria-hidden="true"
-            className="focus-card-index pointer-events-none absolute left-[0.85rem] top-[0.85rem] z-[2] font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-signal"
-          >
-            {area.index}
-          </span>
-        </div>
-      </div>
+function FocusDisc({ area, index }: { area: FocusArea; index: number }) {
+  const reduceMotion = useReducedMotion()
 
-      <div className="focus-card-slide focus-card-slide--copy">
-        <div className="focus-card-copy">
-          <p className="font-mono text-[0.6875rem] uppercase tabular-nums tracking-[0.16em] text-muted">
-            {area.index}
-            <span aria-hidden="true"> · </span>
-            {area.register}
-          </p>
-          <h3 className="text-[clamp(1.35rem,1.4vw+0.7rem,1.75rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-            {area.title}
-          </h3>
-          <p className="text-[0.875rem] leading-[1.45] text-muted">{area.lead}</p>
-        </div>
+  return (
+    <motion.article
+      id={area.id}
+      className="focus-disc scroll-mt-[var(--header-offset)]"
+      initial={
+        reduceMotion
+          ? { opacity: 0 }
+          : { opacity: 0, y: 48, filter: "blur(8px)" }
+      }
+      whileInView={
+        reduceMotion
+          ? { opacity: 1 }
+          : { opacity: 1, y: 0, filter: "blur(0px)" }
+      }
+      viewport={{ once: true, amount: 0.25, margin: "0px 0px -8% 0px" }}
+      transition={{
+        duration: reduceMotion ? 0.2 : 0.7,
+        delay: reduceMotion ? 0 : Math.min(index * 0.08, 0.32),
+        ease: EASE,
+      }}
+    >
+      <div
+        className="focus-disc-orb outline-none"
+        tabIndex={0}
+        role="img"
+        aria-label={area.alt}
+        style={{
+          backgroundImage: `url(${area.image})`,
+          backgroundPosition: area.objectPosition,
+        }}
+      >
+        <span className="focus-disc-label">
+          <span className="focus-disc-index tabular-nums">{area.index}</span>
+          <span className="focus-disc-title">{area.title}</span>
+        </span>
       </div>
-    </article>
+      <div className="focus-disc-copy">
+        <p className="focus-disc-meta">{area.register}</p>
+        <p className="focus-disc-lead">{area.lead}</p>
+      </div>
+    </motion.article>
   )
 }

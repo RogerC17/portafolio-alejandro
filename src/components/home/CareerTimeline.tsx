@@ -12,6 +12,7 @@ import {
 import { useReducedMotion } from "framer-motion"
 import { TextLink } from "@/components/ui/Button"
 import { SectionLabel } from "@/components/ui/SectionLabel"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import {
   careerPeriod,
   homeCareerEvents,
@@ -20,6 +21,7 @@ import {
 } from "@/data/career"
 
 const FIRST_ID = homeCareerEvents[0]?.id ?? ""
+const VISIBLE_MAX = 4
 const TILT_ANGLE = 14
 const BORDER_VARIANTS = [
   "border-left-behind",
@@ -34,9 +36,17 @@ function lerp(start: number, end: number, amount: number) {
   return (1 - amount) * start + amount * end
 }
 
+function clamp(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value))
+}
+
 function remap(value: number, oldMax: number, newMax: number) {
   const next = ((value + oldMax) * (newMax * 2)) / (oldMax * 2) - newMax
   return Math.min(Math.max(next, -newMax), newMax)
+}
+
+function easeInOut(t: number) {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2
 }
 
 function headerOffsetPx() {
@@ -47,14 +57,97 @@ function headerOffsetPx() {
   return Number.isFinite(parsed) ? parsed : 72
 }
 
+function resolveCssLength(host: HTMLElement, expression: string, fallback: number) {
+  const probe = document.createElement("div")
+  probe.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;width:${expression}`
+  host.appendChild(probe)
+  const width = probe.offsetWidth
+  probe.remove()
+  return width > 0 ? width : fallback
+}
+
+type PlateMotion = {
+  x: number
+  scale: number
+  opacity: number
+  z: number
+  rotateY: number
+  depth: number
+}
+
+/**
+ * Ventana fija de `visible` huecos. En cada paso:
+ * - la tarjeta que sale se mete detrás del pack (z bajo) y se desvanece
+ * - las del medio se deslizan al hueco anterior
+ * - la que entra emerge desde detrás de la última
+ * Opacidades de salida/entrada son complementarias → siempre ~4 a la vista.
+ */
+function motionForWindow(
+  index: number,
+  base: number,
+  stepT: number,
+  stride: number,
+  visible: number,
+  reduceMotion: boolean,
+): PlateMotion | null {
+  const last = visible - 1
+  const relative = index - base
+  const t = easeInOut(clamp(stepT, 0, 1))
+
+  // Fuera de la ventana activa de este paso.
+  if (relative < 0 || relative > visible) return null
+
+  // Sale: se esconde detrás de la primera y desaparece.
+  if (relative === 0) {
+    return {
+      x: lerp(0, stride * 0.28, t),
+      scale: lerp(1, 0.8, t),
+      opacity: 1 - t,
+      z: Math.round(lerp(18, 1, t)),
+      rotateY: reduceMotion ? 0 : lerp(0, 11, t),
+      depth: lerp(0, -72, t),
+    }
+  }
+
+  // Entra: aparece desde detrás de la última.
+  if (relative === visible) {
+    return {
+      x: last * stride - (1 - t) * stride * 0.28,
+      scale: lerp(0.8, 1, t),
+      opacity: t,
+      z: Math.round(lerp(1, 18 + last, t)),
+      rotateY: reduceMotion ? 0 : lerp(-11, 0, t),
+      depth: lerp(-72, 0, t),
+    }
+  }
+
+  // Medio: se desplaza un hueco a la izquierda.
+  const fromSlot = relative
+  const toSlot = relative - 1
+  const slot = lerp(fromSlot, toSlot, t)
+  return {
+    x: slot * stride,
+    scale: 1,
+    opacity: 1,
+    z: Math.round(20 + slot),
+    rotateY: 0,
+    depth: 0,
+  }
+}
+
 export function CareerTimeline() {
   const reduceMotion = useReducedMotion()
   const pinRef = useRef<HTMLElement>(null)
   const stickyRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
-  const listRef = useRef<HTMLOListElement>(null)
+  const stageRef = useRef<HTMLDivElement>(null)
   const plateRefs = useRef(new Map<string, HTMLElement>())
-  const travelRef = useRef(0)
+  const layoutRef = useRef({
+    visible: VISIBLE_MAX,
+    stride: 0,
+    travel: 0,
+    steps: 0,
+  })
 
   const [activeId, setActiveId] = useState(FIRST_ID)
   const [hoveredId, setHoveredId] = useState<string | null>(null)
@@ -66,67 +159,115 @@ export function CareerTimeline() {
     homeCareerEvents.find((event) => event.id === focusId) ??
     homeCareerEvents[0]
 
-  const measureTravel = useCallback(() => {
+  const measureLayout = useCallback(() => {
     const track = trackRef.current
-    const list = listRef.current
+    const stage = stageRef.current
     const sticky = stickyRef.current
-    if (!track || !list || !sticky) return 0
+    if (!track || !stage || !sticky) return
 
-    // 1:1 con el overflow real: el pin dura exactamente lo que tardan las cards.
-    const overflow = Math.max(0, list.scrollWidth - track.clientWidth)
-    travelRef.current = overflow
-    setPinHeight(sticky.offsetHeight + overflow)
-    return overflow
+    const trackStyles = getComputedStyle(track)
+    const padL = Number.parseFloat(trackStyles.paddingLeft) || 0
+    const padR = Number.parseFloat(trackStyles.paddingRight) || 0
+    const viewWidth = Math.max(0, track.clientWidth - padL - padR)
+    const cardW = resolveCssLength(sticky, "var(--career-card-w)", 304)
+    const gap = resolveCssLength(sticky, "var(--career-gap)", 36)
+    const visible = clamp(
+      Math.floor((viewWidth + gap) / (cardW + gap)),
+      1,
+      VISIBLE_MAX,
+    )
+    const stride = cardW + gap
+    const stageWidth = visible * cardW + (visible - 1) * gap
+    const steps = Math.max(0, homeCareerEvents.length - visible)
+    const travel = steps * Math.round(sticky.offsetHeight * 0.72)
+
+    stage.style.width = `${stageWidth}px`
+    stage.style.setProperty("--career-visible", String(visible))
+    layoutRef.current = { visible, stride, travel, steps }
+    setPinHeight(sticky.offsetHeight + travel)
   }, [])
 
   const syncFromScroll = useEffectEvent(() => {
     const pin = pinRef.current
-    const list = listRef.current
-    if (!pin || !list) return
+    const { visible, stride, travel, steps } = layoutRef.current
+    if (!pin || stride <= 0) return
 
-    const travel = travelRef.current
-    if (travel <= 0) {
-      list.style.transform = "translate3d(0,0,0)"
-      pin.style.setProperty("--career-progress", "0")
-      setProgress(0)
-      return
+    let next = 0
+    if (travel > 0) {
+      const top = headerOffsetPx()
+      const scrolled = clamp(top - pin.getBoundingClientRect().top, 0, travel)
+      next = scrolled / travel
     }
 
-    const top = headerOffsetPx()
-    const scrolled = Math.min(
-      travel,
-      Math.max(0, top - pin.getBoundingClientRect().top),
-    )
-    const next = scrolled / travel
-    list.style.transform = `translate3d(${-scrolled}px,0,0)`
     pin.style.setProperty("--career-progress", String(next))
     setProgress(next)
 
-    const plates = [...plateRefs.current.entries()]
-    if (plates.length === 0) return
+    const progressIndex = next * steps
+    const base =
+      steps <= 0 ? 0 : clamp(Math.floor(progressIndex), 0, Math.max(0, steps - 1))
+    const stepT =
+      steps <= 0 ? 0 : clamp(progressIndex - base, 0, 1)
+    // Tope final: ventana asentada (t=0) en el último índice.
+    const atEnd = steps > 0 && next >= 0.999
+    const windowBase = atEnd ? steps : base
+    const windowT = atEnd ? 0 : stepT
+    const reduce = Boolean(reduceMotion)
+    let bestId = homeCareerEvents[0]?.id ?? ""
+    let bestScore = Number.POSITIVE_INFINITY
+    const centerSlot = (visible - 1) / 2
 
-    const viewportCenter = window.innerWidth / 2
-    let bestId = plates[0]![0]
-    let bestDist = Number.POSITIVE_INFINITY
-    for (const [id, node] of plates) {
-      const rect = node.getBoundingClientRect()
-      const center = rect.left + rect.width / 2
-      const dist = Math.abs(center - viewportCenter)
-      if (dist < bestDist) {
-        bestDist = dist
-        bestId = id
+    homeCareerEvents.forEach((event, index) => {
+      const node = plateRefs.current.get(event.id)
+      if (!node) return
+
+      const motion = motionForWindow(
+        index,
+        windowBase,
+        windowT,
+        stride,
+        visible,
+        reduce,
+      )
+
+      if (!motion || motion.opacity <= 0.02) {
+        node.style.opacity = "0"
+        node.style.pointerEvents = "none"
+        node.style.visibility = "hidden"
+        node.setAttribute("aria-hidden", "true")
+        return
       }
-    }
-    if (!hoveredId) setActiveId(bestId)
+
+      node.style.visibility = "visible"
+      node.style.opacity = String(motion.opacity)
+      node.style.zIndex = String(motion.z)
+      node.style.pointerEvents = motion.opacity < 0.35 ? "none" : ""
+      node.style.transform = `translate3d(${motion.x}px, -50%, ${motion.depth}px) scale(${motion.scale}) rotateY(${motion.rotateY}deg)`
+      node.removeAttribute("aria-hidden")
+
+      const relative = index - windowBase
+      const visualSlot =
+        relative === 0
+          ? lerp(0, 0.28, windowT)
+          : relative === visible
+            ? visible - 1 - (1 - windowT) * 0.28
+            : lerp(relative, relative - 1, windowT)
+      const score = Math.abs(visualSlot - centerSlot)
+      if (score < bestScore) {
+        bestScore = score
+        bestId = event.id
+      }
+    })
+
+    if (!hoveredId && bestId) setActiveId(bestId)
   })
 
   useEffect(() => {
-    measureTravel()
+    measureLayout()
     syncFromScroll()
 
     const onScroll = () => syncFromScroll()
     const onResize = () => {
-      measureTravel()
+      measureLayout()
       syncFromScroll()
     }
 
@@ -134,23 +275,23 @@ export function CareerTimeline() {
     window.addEventListener("resize", onResize)
 
     const track = trackRef.current
-    const list = listRef.current
+    const sticky = stickyRef.current
     const resizeObserver =
       typeof ResizeObserver !== "undefined"
         ? new ResizeObserver(() => {
-            measureTravel()
+            measureLayout()
             syncFromScroll()
           })
         : null
     if (track) resizeObserver?.observe(track)
-    if (list) resizeObserver?.observe(list)
+    if (sticky) resizeObserver?.observe(sticky)
 
     return () => {
       window.removeEventListener("scroll", onScroll)
       window.removeEventListener("resize", onResize)
       resizeObserver?.disconnect()
     }
-  }, [measureTravel])
+  }, [measureLayout])
 
   if (!focusEvent) return null
 
@@ -169,12 +310,12 @@ export function CareerTimeline() {
     >
       <div ref={stickyRef} className="career-gallery">
         <div className="career-gallery-chrome">
-          <div className="editorial-shell">
+          <ScrollReveal className="editorial-shell" distance={48}>
             <div className="col-span-4 md:col-span-5 lg:col-span-7">
               <SectionLabel index="[02]" />
               <h2
                 id="trayectoria-heading"
-                className="mt-[var(--space-sm)] text-[clamp(1.75rem,2vw+0.9rem,3rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.04em]"
+                className="home-section-display mt-[var(--space-sm)]"
               >
                 Trayectoria
               </h2>
@@ -205,7 +346,7 @@ export function CareerTimeline() {
                 {careerPeriod(focusEvent)}
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div className="career-gallery-shell">
@@ -220,43 +361,47 @@ export function CareerTimeline() {
             role="region"
             aria-label="Línea de tiempo de trayectoria. Continúa el scroll de la página para avanzar."
           >
-            <ol ref={listRef} className="career-gallery-list">
-              {homeCareerEvents.map((event, index) => (
-                <li
-                  key={event.id}
-                  data-career-event={event.id}
-                  data-active={event.id === focusId ? "true" : "false"}
-                  className="career-plate"
-                  ref={(node) => {
-                    if (node) plateRefs.current.set(event.id, node)
-                    else plateRefs.current.delete(event.id)
-                  }}
-                  onMouseEnter={() => setHoveredId(event.id)}
-                  onMouseLeave={() => setHoveredId(null)}
-                  onFocusCapture={() => setHoveredId(event.id)}
-                  onBlurCapture={(eventBlur) => {
-                    if (
-                      !eventBlur.currentTarget.contains(
-                        eventBlur.relatedTarget as Node,
-                      )
-                    ) {
-                      setHoveredId(null)
-                    }
-                  }}
-                >
-                  <CareerCard
-                    event={event}
-                    active={event.id === focusId}
-                    borderClass={BORDER_VARIANTS[index % BORDER_VARIANTS.length]!}
-                    reduceMotion={Boolean(reduceMotion)}
-                    onSelect={() => {
-                      setActiveId(event.id)
-                      setHoveredId(event.id)
+            <div ref={stageRef} className="career-gallery-stage">
+              <ol className="career-gallery-list">
+                {homeCareerEvents.map((event, index) => (
+                  <li
+                    key={event.id}
+                    data-career-event={event.id}
+                    data-active={event.id === focusId ? "true" : "false"}
+                    className="career-plate"
+                    ref={(node) => {
+                      if (node) plateRefs.current.set(event.id, node)
+                      else plateRefs.current.delete(event.id)
                     }}
-                  />
-                </li>
-              ))}
-            </ol>
+                    onMouseEnter={() => setHoveredId(event.id)}
+                    onMouseLeave={() => setHoveredId(null)}
+                    onFocusCapture={() => setHoveredId(event.id)}
+                    onBlurCapture={(eventBlur) => {
+                      if (
+                        !eventBlur.currentTarget.contains(
+                          eventBlur.relatedTarget as Node,
+                        )
+                      ) {
+                        setHoveredId(null)
+                      }
+                    }}
+                  >
+                    <CareerCard
+                      event={event}
+                      active={event.id === focusId}
+                      borderClass={
+                        BORDER_VARIANTS[index % BORDER_VARIANTS.length]!
+                      }
+                      reduceMotion={Boolean(reduceMotion)}
+                      onSelect={() => {
+                        setActiveId(event.id)
+                        setHoveredId(event.id)
+                      }}
+                    />
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
 
           <div className="career-gallery-progress" aria-hidden="true">
@@ -325,12 +470,18 @@ function CareerCard({
   }
 
   const imageUrl = event.image ? `url('${event.image}')` : "none"
+  const imageFocus = event.imagePosition ?? "center 30%"
 
   return (
     <article
       ref={cardRef}
       className={`career-card ${borderClass} ${active ? "is-active" : ""}`}
-      style={{ "--url": imageUrl } as CSSProperties}
+      style={
+        {
+          "--url": imageUrl,
+          "--career-focus": imageFocus,
+        } as CSSProperties
+      }
       onClick={onSelect}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
