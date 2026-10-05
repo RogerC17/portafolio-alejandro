@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { PublicationCover } from "@/components/publicaciones/PublicationCover"
+import { PublicationActions } from "@/components/publicaciones/PublicationActions"
+import { PublicationBook3D } from "@/components/home/PublicationBook3D"
 import {
   publicationAuthorsLabel,
   publications,
@@ -18,66 +19,64 @@ export function PublicacionesArchive() {
       <div className="flex flex-col">
         {publications.map((publication, index) => {
           const imageLeft = index % 2 === 0
+          const detailHref = `/publicaciones/${publication.slug}`
 
           return (
             <article
               key={publication.slug}
               className="border-t border-[var(--border)]"
             >
-              <Link
-                href={`/publicaciones/${publication.slug}`}
-                className="group grid min-h-11 focus-visible:outline-offset-4"
-              >
-                <div className="editorial-shell">
-                  <div
-                    className={`relative col-span-4 min-h-[40vh] overflow-hidden bg-surface lg:col-span-5 lg:min-h-[min(45vh,28rem)] ${
-                      imageLeft ? "" : "lg:col-start-8"
-                    }`}
-                  >
-                    <PublicationCover
-                      publication={publication}
-                      priority={index === 0}
-                      sizes="(max-width: 1023px) 100vw, 42vw"
-                    />
-                  </div>
-                  <div
-                    className={`col-span-4 flex flex-col justify-end gap-[var(--space-sm)] py-[var(--space-xl)] lg:col-span-6 lg:min-h-[min(45vh,28rem)] ${
-                      imageLeft
-                        ? "lg:col-start-7"
-                        : "lg:col-start-1 lg:row-start-1"
-                    }`}
-                  >
-                    <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
-                      <span className="tabular-nums">
-                        {archiveLabel("Obra", index + 1)}
-                      </span>
-                      <span aria-hidden="true"> · </span>
-                      {publication.year}
-                      <span aria-hidden="true"> · </span>
-                      {publicationAuthorsLabel(publication.authors)}
-                      {publication.publisher ? (
-                        <>
-                          <span aria-hidden="true"> · </span>
-                          {publication.publisher}
-                        </>
-                      ) : null}
-                    </p>
-                    <h3 className="max-w-[16ch] text-[clamp(1.75rem,2.2vw+1rem,2.75rem)] font-extrabold leading-[1.02] tracking-[-0.03em]">
+              <div className="editorial-shell">
+                <Link
+                  href={detailHref}
+                  className={`relative col-span-4 flex items-center justify-center py-[var(--space-xl)] focus-visible:outline-offset-4 lg:col-span-5 lg:min-h-[min(45vh,28rem)] ${
+                    imageLeft ? "" : "lg:col-start-8"
+                  }`}
+                >
+                  <PublicationBook3D
+                    publication={publication}
+                    focusable={false}
+                  />
+                </Link>
+                <div
+                  className={`col-span-4 flex flex-col justify-end gap-[var(--space-sm)] py-[var(--space-xl)] lg:col-span-6 lg:min-h-[min(45vh,28rem)] ${
+                    imageLeft
+                      ? "lg:col-start-7"
+                      : "lg:col-start-1 lg:row-start-1"
+                  }`}
+                >
+                  <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
+                    <span className="tabular-nums">
+                      {archiveLabel("Obra", index + 1)}
+                    </span>
+                    <span aria-hidden="true"> · </span>
+                    {publication.year}
+                    <span aria-hidden="true"> · </span>
+                    {publicationAuthorsLabel(publication.authors)}
+                    {publication.publisher ? (
+                      <>
+                        <span aria-hidden="true"> · </span>
+                        {publication.publisher}
+                      </>
+                    ) : null}
+                  </p>
+                  <h3 className="max-w-[16ch] text-[clamp(1.75rem,2.2vw+1rem,2.75rem)] font-extrabold leading-[1.02] tracking-[-0.03em]">
+                    <Link
+                      href={detailHref}
+                      className="focus-visible:outline-offset-4"
+                    >
                       {publication.title}
-                    </h3>
-                    <p className="editorial-measure text-[1.0625rem] leading-[1.5] text-foreground">
-                      {publication.description}
-                    </p>
-                    <p className="mt-[var(--space-sm)] text-[0.9375rem] font-medium text-foreground">
-                      {publication.ctaLabel}
-                      <span aria-hidden="true" className="text-foreground">
-                        {" "}
-                        →
-                      </span>
-                    </p>
-                  </div>
+                    </Link>
+                  </h3>
+                  <p className="editorial-measure text-[1.0625rem] leading-[1.5] text-foreground">
+                    {publication.description}
+                  </p>
+                  <PublicationActions
+                    buyUrl={publication.buyUrl}
+                    noteUrl={publication.url}
+                  />
                 </div>
-              </Link>
+              </div>
             </article>
           )
         })}

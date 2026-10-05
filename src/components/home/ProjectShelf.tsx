@@ -92,12 +92,41 @@ export function ProjectShelf({
     const track = trackRef.current
     if (!track) return
     closePreviews()
-    const amount = Math.max(track.clientWidth * 0.82, 260)
+
+    const slots = [...track.querySelectorAll<HTMLElement>(".project-shelf-slot")]
+    const max = Math.max(0, track.scrollWidth - track.clientWidth)
+    const padLeft = Number.parseFloat(getComputedStyle(track).paddingLeft) || 0
+    const positions = slots.map((slot) => Math.max(0, slot.offsetLeft - padLeft))
+    const start = track.scrollLeft
+    const slotWidth = slots[0]?.offsetWidth ?? 280
+    const visible = Math.max(1, Math.floor(track.clientWidth / (slotWidth + 8)))
+    const step = Math.max(1, visible - 1)
+    let index = 0
+
+    if (direction === 1) {
+      const next = positions.findIndex((position) => position > start + 8)
+      index =
+        next < 0
+          ? positions.length - 1
+          : Math.min(positions.length - 1, next + step - 1)
+    } else {
+      const current = positions.findLastIndex((position) => position <= start + 8)
+      index = Math.max(0, (current < 0 ? 0 : current) - step)
+    }
+
+    const target = Math.min(max, Math.max(0, positions[index] ?? 0))
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    track.scrollBy({
-      left: amount * direction,
+    track.style.scrollSnapType = "none"
+    track.scrollTo({
+      left: target,
       behavior: reduce ? "auto" : "smooth",
     })
+
+    const restoreSnap = () => {
+      track.style.scrollSnapType = ""
+    }
+    track.addEventListener("scrollend", restoreSnap, { once: true })
+    window.setTimeout(restoreSnap, reduce ? 40 : 700)
   }
 
   if (projects.length === 0) return null

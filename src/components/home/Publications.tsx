@@ -1,5 +1,5 @@
+import { PublicationActions } from "@/components/publicaciones/PublicationActions"
 import { TextLink } from "@/components/ui/Button"
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { ScrollReveal, ScrollRevealItem } from "@/components/ui/ScrollReveal"
 import { PublicationBook3D } from "@/components/home/PublicationBook3D"
 import {
@@ -17,10 +17,9 @@ export function Publications() {
     >
       <ScrollReveal className="editorial-shell" distance={52}>
         <div className="col-span-4 lg:col-span-12">
-          <SectionLabel index="[05]" />
           <h2
             id="publicaciones-heading"
-            className="home-section-display mt-[var(--space-sm)]"
+            className="home-section-display"
           >
             Publicaciones
           </h2>
@@ -62,19 +61,10 @@ export function Publications() {
                     <p className="editorial-measure text-[1.0625rem] leading-[1.5] text-foreground">
                       {publication.description}
                     </p>
-                    {publication.url ? (
-                      <div className="mt-[var(--space-sm)]">
-                        <TextLink href={publication.url}>
-                          {publication.ctaLabel}
-                        </TextLink>
-                      </div>
-                    ) : (
-                      <div className="mt-[var(--space-sm)]">
-                        <TextLink href={`/publicaciones/${publication.slug}`}>
-                          {publication.ctaLabel}
-                        </TextLink>
-                      </div>
-                    )}
+                    <PublicationActions
+                      buyUrl={publication.buyUrl}
+                      noteUrl={publication.url}
+                    />
                   </div>
                 </div>
               </article>

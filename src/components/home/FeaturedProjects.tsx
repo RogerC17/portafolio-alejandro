@@ -1,5 +1,4 @@
 import { TextLink } from "@/components/ui/Button"
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { ProjectShelf } from "@/components/home/ProjectShelf"
 import {
@@ -22,10 +21,9 @@ export function FeaturedProjects() {
     >
       <ScrollReveal className="editorial-shell" distance={52}>
         <div className="col-span-4 md:col-span-5 lg:col-span-8">
-          <SectionLabel index="[03]" />
           <h2
             id="proyectos-heading"
-            className="home-section-display mt-[var(--space-sm)]"
+            className="home-section-display"
           >
             Proyectos
           </h2>

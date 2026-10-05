@@ -30,7 +30,7 @@ type FloatRect = {
   meta: "below" | "above"
 }
 
-function measureFloatRect(rect: DOMRect): FloatRect {
+function measureFloatRect(rect: DOMRect, frame: DOMRect | null): FloatRect {
   const margin = 16
   const scaled = rect.width * FLOAT_SCALE
   const grow = (scaled - rect.width) / 2
@@ -54,8 +54,8 @@ function measureFloatRect(rect: DOMRect): FloatRect {
     roomBelow < metaRoom && roomAbove > roomBelow ? "above" : "below"
 
   return {
-    top: rect.top,
-    left: rect.left,
+    top: frame ? rect.top - frame.top : rect.top,
+    left: frame ? rect.left - frame.left : rect.left,
     width: rect.width,
     origin,
     meta,
@@ -85,7 +85,13 @@ export function ProjectPreviewCard({
   const syncFloatRect = useEffectEvent(() => {
     const anchor = anchorRef.current
     if (!anchor) return
-    setFloatRect(measureFloatRect(anchor.getBoundingClientRect()))
+    const frame = anchor.closest(".project-shelf-frame")
+    setFloatRect(
+      measureFloatRect(
+        anchor.getBoundingClientRect(),
+        frame?.getBoundingClientRect() ?? null,
+      ),
+    )
   })
 
   useEffect(() => {

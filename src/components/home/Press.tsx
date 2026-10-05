@@ -1,5 +1,4 @@
 import { TextLink } from "@/components/ui/Button"
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { PressDossier } from "@/components/home/PressDossier"
 import { homePressItems } from "@/data/press"
@@ -13,10 +12,9 @@ export function Press() {
     >
       <ScrollReveal className="editorial-shell" distance={52}>
         <div className="col-span-4 md:col-span-5 lg:col-span-8">
-          <SectionLabel index="[06]" />
           <h2
             id="prensa-heading"
-            className="home-section-display mt-[var(--space-sm)]"
+            className="home-section-display"
           >
             En los medios
           </h2>

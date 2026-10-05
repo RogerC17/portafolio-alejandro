@@ -140,12 +140,15 @@ export function Header() {
             </button>
             <Link
               href="/"
-              className="flex min-h-11 items-center gap-2 text-[0.9375rem] font-semibold tracking-[-0.02em] text-foreground"
+              className="flex min-h-11 items-center"
               aria-current={pathname === "/" ? "page" : undefined}
               onClick={closeMenu}
             >
-              <SoyAlejoMark variant="marca" className="h-12 w-auto shrink-0" />
-              <span>{SITE_NAME}</span>
+              <SoyAlejoMark
+                variant="lockup"
+                alt={SITE_NAME}
+                className="h-10 w-auto shrink-0 sm:h-11"
+              />
             </Link>
           </div>
           <nav

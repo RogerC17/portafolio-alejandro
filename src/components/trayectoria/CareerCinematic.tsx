@@ -1,6 +1,6 @@
 import { CareerChapterNav } from "@/components/trayectoria/CareerChapterNav"
 import { CareerCineChapter } from "@/components/trayectoria/CareerCineChapter"
-import { CareerCineHero } from "@/components/trayectoria/CareerScrollVideo"
+import { CareerCineHero } from "@/components/trayectoria/CareerScrollFrames"
 import {
   CareerCanalHonors,
   CareerSeminars,
@@ -16,9 +16,7 @@ export function CareerCinematic() {
   return (
     <div className="career-cine">
       <CareerCineHero
-        src={cinematicHero.video.src}
-        poster={cinematicHero.video.poster}
-        label={cinematicHero.video.label}
+        frame={cinematicHero.frame}
         title={cinematicHero.title}
         years={cinematicHero.kicker}
         lead={cinematicHero.lead}

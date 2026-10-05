@@ -11,7 +11,6 @@ import {
 } from "react"
 import { useReducedMotion } from "framer-motion"
 import { TextLink } from "@/components/ui/Button"
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import {
   careerPeriod,
@@ -312,10 +311,9 @@ export function CareerTimeline() {
         <div className="career-gallery-chrome">
           <ScrollReveal className="editorial-shell" distance={48}>
             <div className="col-span-4 md:col-span-5 lg:col-span-7">
-              <SectionLabel index="[02]" />
               <h2
                 id="trayectoria-heading"
-                className="home-section-display mt-[var(--space-sm)]"
+                className="home-section-display"
               >
                 Trayectoria
               </h2>

@@ -1,6 +1,5 @@
 import { SocialReelCarousel } from "@/components/home/SocialReelCarousel"
 import { TextLink } from "@/components/ui/Button"
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { SocialOrbs } from "@/components/ui/SocialOrbs"
 import { contactChannelNote } from "@/data/contact"
@@ -26,8 +25,7 @@ export function ContactCTA({ asPage = false }: ContactCTAProps) {
           className="col-span-4 md:col-span-8 lg:col-span-5"
           distance={56}
         >
-          {asPage ? null : <SectionLabel index="[07]" />}
-          <blockquote className="mt-[var(--space-sm)] font-serif text-[clamp(1.5rem,1.6vw+1rem,2.5rem)] font-normal italic leading-[1.2] text-foreground">
+          <blockquote className="font-serif text-[clamp(1.5rem,1.6vw+1rem,2.5rem)] font-normal italic leading-[1.2] text-foreground">
             {CONTACT_QUOTE}
           </blockquote>
           <Heading

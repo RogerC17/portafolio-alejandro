@@ -1,4 +1,3 @@
-import { SectionLabel } from "@/components/ui/SectionLabel"
 import { publicationsLead } from "@/data/publications"
 
 export function PublicacionesIntro() {
@@ -9,10 +8,9 @@ export function PublicacionesIntro() {
     >
       <div className="editorial-shell">
         <div className="col-span-4 md:col-span-6 lg:col-span-8">
-          <SectionLabel index="[05]" />
           <h1
             id="publicaciones-heading"
-            className="mt-[var(--space-sm)] text-[clamp(2rem,2.4vw+1rem,3.25rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.04em]"
+            className="text-[clamp(2rem,2.4vw+1rem,3.25rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.04em]"
           >
             Publicaciones
           </h1>

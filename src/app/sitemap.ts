@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next"
-import { articles } from "@/data/articles"
 import { pressItems } from "@/data/press"
 import { publications } from "@/data/publications"
 import { NAV_ITEMS, SITE_URL } from "@/data/site"
@@ -16,13 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: item.href === "/" ? 1 : 0.7,
   })) satisfies MetadataRoute.Sitemap
 
-  const ideaEntries = articles.map((article) => ({
-    url: new URL(`/ideas/${article.slug}`, SITE_URL).toString(),
-    lastModified: new Date(article.dateIso),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }))
-
   const publicationEntries = publications.map((publication) => ({
     url: new URL(`/publicaciones/${publication.slug}`, SITE_URL).toString(),
     lastModified,
@@ -37,5 +29,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
-  return [...navEntries, ...ideaEntries, ...publicationEntries, ...pressEntries]
+  return [...navEntries, ...publicationEntries, ...pressEntries]
 }

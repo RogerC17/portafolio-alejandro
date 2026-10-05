@@ -22,17 +22,12 @@ export const HERO_REGISTER = [
 export const HERO_INDEX = [
   { index: "02", label: "Trayectoria", href: "#trayectoria" },
   { index: "03", label: "Proyectos", href: "/proyectos" },
-  { index: "04", label: "Ideas", href: "/ideas" },
+  { index: "04", label: "Publicaciones", href: "/publicaciones" },
 ] as const
 
 export const HERO_PRIMARY_CTA = {
   href: "#trayectoria",
   label: "Explorar trayectoria",
-} as const
-
-export const HERO_SECONDARY_CTA = {
-  href: "/ideas",
-  label: "Conocer mis ideas",
 } as const
 
 export const HERO_IMAGE = {
@@ -44,12 +39,10 @@ export const HERO_IMAGE = {
 
 export const HERO_MEDIA = {
   alt: "Alejandro Linares",
-  src: "/images/alejandro/alejandro-hero-cutout.webp",
-  width: 2266,
-  height: 3200,
+  src: "/images/alejandro/alejandro-hero-studio.webp",
+  width: 750,
+  height: 1008,
 } as const
-
-export const MANIFESTO_INDEX = "[01]"
 
 export const MANIFESTO_QUOTE_LINES = [
   "La tecnología no transforma sociedades.",

@@ -1,12 +1,16 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import { useState } from "react"
 import { focusAreas, type FocusArea } from "@/data/focus-areas"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 
-const EASE = [0.16, 1, 0.3, 1] as const
-
 export function FocusAreas() {
+  const [activeId, setActiveId] = useState(focusAreas[0]?.id ?? "")
+  const active =
+    focusAreas.find((area) => area.id === activeId) ?? focusAreas[0]
+
+  if (!active) return null
+
   return (
     <section
       id="areas"
@@ -15,7 +19,7 @@ export function FocusAreas() {
     >
       <div className="border-t border-[var(--border)] py-[var(--space-lg)] lg:py-[var(--space-xl)]">
         <div className="editorial-shell">
-          <ScrollReveal className="col-span-4 md:col-span-8" distance={48}>
+          <ScrollReveal className="col-span-4 md:col-span-8" distance={32}>
             <h2 id="areas-heading" className="home-section-display">
               Áreas de trabajo
             </h2>
@@ -23,64 +27,76 @@ export function FocusAreas() {
         </div>
       </div>
 
-      <div className="relative border-t border-[var(--border)]">
-        <div className="focus-disc-grid">
-          {focusAreas.map((area, index) => (
-            <FocusDisc key={area.id} area={area} index={index} />
-          ))}
-        </div>
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-primary"
-        />
+      <div
+        className="focus-band"
+        role="radiogroup"
+        aria-labelledby="areas-heading"
+        onKeyDown={(event) => {
+          const forward = event.key === "ArrowDown" || event.key === "ArrowRight"
+          const back = event.key === "ArrowUp" || event.key === "ArrowLeft"
+          if (!forward && !back) return
+          event.preventDefault()
+          const index = focusAreas.findIndex((area) => area.id === active.id)
+          const next =
+            focusAreas[
+              (index + (forward ? 1 : -1) + focusAreas.length) %
+                focusAreas.length
+            ]
+          if (!next) return
+          setActiveId(next.id)
+          document.getElementById(next.id)?.focus()
+        }}
+      >
+        {focusAreas.map((area) => (
+          <FocusPanel
+            key={area.id}
+            area={area}
+            pressed={area.id === active.id}
+            onSelect={() => setActiveId(area.id)}
+          />
+        ))}
       </div>
     </section>
   )
 }
 
-function FocusDisc({ area, index }: { area: FocusArea; index: number }) {
-  const reduceMotion = useReducedMotion()
-
+function FocusPanel({
+  area,
+  pressed,
+  onSelect,
+}: {
+  area: FocusArea
+  pressed: boolean
+  onSelect: () => void
+}) {
   return (
-    <motion.article
+    <button
+      type="button"
       id={area.id}
-      className="focus-disc scroll-mt-[var(--header-offset)]"
-      initial={
-        reduceMotion
-          ? { opacity: 0 }
-          : { opacity: 0, y: 48, filter: "blur(8px)" }
-      }
-      whileInView={
-        reduceMotion
-          ? { opacity: 1 }
-          : { opacity: 1, y: 0, filter: "blur(0px)" }
-      }
-      viewport={{ once: true, amount: 0.25, margin: "0px 0px -8% 0px" }}
-      transition={{
-        duration: reduceMotion ? 0.2 : 0.7,
-        delay: reduceMotion ? 0 : Math.min(index * 0.08, 0.32),
-        ease: EASE,
-      }}
+      role="radio"
+      aria-checked={pressed}
+      tabIndex={pressed ? 0 : -1}
+      className="focus-panel"
+      onMouseEnter={onSelect}
+      onFocus={onSelect}
+      onClick={onSelect}
     >
-      <div
-        className="focus-disc-orb outline-none"
-        tabIndex={0}
-        role="img"
-        aria-label={area.alt}
-        style={{
-          backgroundImage: `url(${area.image})`,
-          backgroundPosition: area.objectPosition,
-        }}
-      >
-        <span className="focus-disc-label">
-          <span className="focus-disc-index tabular-nums">{area.index}</span>
-          <span className="focus-disc-title">{area.title}</span>
-        </span>
-      </div>
-      <div className="focus-disc-copy">
-        <p className="focus-disc-meta">{area.register}</p>
-        <p className="focus-disc-lead">{area.lead}</p>
-      </div>
-    </motion.article>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={area.image}
+        alt=""
+        width={1800}
+        height={1400}
+        draggable={false}
+        style={{ objectPosition: area.objectPosition }}
+      />
+      <span className="focus-panel-veil" aria-hidden="true" />
+      <span className="focus-panel-copy">
+        <span className="focus-panel-index tabular-nums">{area.index}</span>
+        <span className="focus-panel-title">{area.title}</span>
+        <span className="focus-panel-lead">{area.lead}</span>
+        <span className="focus-panel-meta">{area.register}</span>
+      </span>
+    </button>
   )
 }

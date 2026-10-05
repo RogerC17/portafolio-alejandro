@@ -6,7 +6,6 @@ import {
   HERO_METADATA,
   HERO_NAME_LINES,
   HERO_PRIMARY_CTA,
-  HERO_SECONDARY_CTA,
 } from "@/data/home"
 import { HeroMedia } from "./HeroMedia"
 
@@ -30,15 +29,12 @@ export function Hero() {
           <p className="hero-cover-role text-[clamp(0.9375rem,0.2vw+0.9rem,1.0625rem)] leading-snug text-foreground">
             {SITE_ROLE}
           </p>
-          <p className="hero-cover-lead editorial-measure text-[clamp(0.9375rem,0.15vw+0.9rem,1.0625rem)] leading-[1.4] text-foreground/90">
-            {HERO_LEAD}
+          <p className="hero-cover-lead editorial-measure">
+            “{HERO_LEAD}”
           </p>
           <div className="hero-cover-ctas flex flex-col items-start gap-1 pt-[var(--space-xs)] sm:flex-row sm:gap-8">
             <TextLink href={HERO_PRIMARY_CTA.href}>
               {HERO_PRIMARY_CTA.label}
-            </TextLink>
-            <TextLink href={HERO_SECONDARY_CTA.href} variant="secondary">
-              {HERO_SECONDARY_CTA.label}
             </TextLink>
           </div>
         </div>

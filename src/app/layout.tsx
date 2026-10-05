@@ -3,6 +3,7 @@ import { Archivo, JetBrains_Mono, Newsreader } from "next/font/google"
 import { ArchiveField } from "@/components/layout/ArchiveField"
 import { Footer } from "@/components/layout/Footer"
 import { Header } from "@/components/layout/Header"
+import { AlejandroChat } from "@/components/avatar/AlejandroChat"
 import { SocialDock } from "@/components/layout/SocialDock"
 import { StructuredData } from "@/components/seo/StructuredData"
 import {
@@ -24,6 +25,7 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   display: "swap",
   style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -81,6 +83,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Footer />
         <SocialDock />
+        <AlejandroChat />
       </body>
     </html>
   )

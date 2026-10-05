@@ -1,5 +1,4 @@
 import { PrensaArchive } from "@/components/prensa/PrensaArchive"
-import { PrensaIntro } from "@/components/prensa/PrensaIntro"
 import { NewsArticleStructuredData } from "@/components/seo/NewsArticleStructuredData"
 import { pressItems, pressLead } from "@/data/press"
 import { createPageMetadata } from "@/lib/seo"
@@ -14,7 +13,6 @@ export default function PrensaPage() {
       {pressItems.map((item) => (
         <NewsArticleStructuredData key={item.slug} item={item} />
       ))}
-      <PrensaIntro />
       <PrensaArchive />
     </main>
   )

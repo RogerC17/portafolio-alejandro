@@ -44,6 +44,13 @@ export function BookStructuredData({ publication }: BookStructuredDataProps) {
     data.sameAs = publication.url
   }
 
+  if (publication.buyUrl) {
+    data.offers = {
+      "@type": "Offer",
+      url: publication.buyUrl,
+    }
+  }
+
   return (
     <script
       type="application/ld+json"

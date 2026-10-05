@@ -1,81 +1,185 @@
 import Image from "next/image"
 import Link from "next/link"
 import { isPendingCopy } from "@/lib/content"
-import { archiveLabel } from "@/lib/archive"
-import { latestPressSlug, pressItems } from "@/data/press"
+import { pressItemsByDate, pressLead, type PressItem } from "@/data/press"
+import { SITE_LOCATION } from "@/data/site"
+
+function PressByline({
+  item,
+  className,
+}: {
+  item: PressItem
+  className?: string
+}) {
+  const showDate = !isPendingCopy(item.date)
+
+  return (
+    <p className={className ? `press-byline ${className}` : "press-byline"}>
+      <span>{item.media}</span>
+      {showDate ? (
+        <>
+          <span aria-hidden="true"> · </span>
+          <time dateTime={item.dateIso}>{item.date}</time>
+        </>
+      ) : null}
+    </p>
+  )
+}
+
+function PressPhoto({
+  item,
+  sizes,
+  priority = false,
+}: {
+  item: PressItem
+  sizes: string
+  priority?: boolean
+}) {
+  if (!item.image) {
+    return <span className="press-photo-fallback" aria-hidden="true" />
+  }
+
+  return (
+    <Image
+      src={item.image}
+      alt=""
+      fill
+      priority={priority}
+      sizes={sizes}
+      className="object-cover"
+    />
+  )
+}
+
+const COMPANION_COUNT = 3
 
 export function PrensaArchive() {
-  const recentSlug = latestPressSlug(pressItems)
+  const ordered = pressItemsByDate()
+  const [lead, ...rest] = ordered
+  const companions = rest.slice(0, COMPANION_COUNT)
+  const index = rest.slice(COMPANION_COUNT)
+  const edition = lead && !isPendingCopy(lead.date) ? lead.date : null
 
   return (
     <section
-      aria-labelledby="prensa-archivo-heading"
-      className="pb-[var(--space-3xl)]"
+      aria-labelledby="prensa-heading"
+      className="press-front pb-[var(--space-3xl)] pt-[calc(var(--header-offset)+var(--space-xl))]"
     >
-      <h2 id="prensa-archivo-heading" className="sr-only">
-        Archivo de prensa
-      </h2>
       <div className="editorial-shell">
-        <ul className="col-span-4 lg:col-span-12">
-          {pressItems.map((item, index) => {
-            const showDate = !isPendingCopy(item.date)
-            const recent = item.slug === recentSlug
+        <div className="col-span-4 md:col-span-8 lg:col-span-12">
+          <header className="press-mast">
+            <div className="press-rules" aria-hidden="true">
+              <span />
+              <span />
+            </div>
+            <h1 id="prensa-heading" className="press-name">
+              En los medios
+            </h1>
+            <p className="press-motto">{pressLead}</p>
+            <div className="press-rules" aria-hidden="true">
+              <span />
+              <span />
+            </div>
+            <p className="press-dateline">
+              <span>{SITE_LOCATION}</span>
+              {edition ? (
+                <span>
+                  Edición del <time dateTime={lead?.dateIso}>{edition}</time>
+                </span>
+              ) : (
+                <span>Archivo</span>
+              )}
+              <span>
+                {ordered.length === 1 ? "1 nota" : `${ordered.length} notas`}
+              </span>
+            </p>
+          </header>
 
-            return (
-              <li
-                key={item.slug}
-                className="border-t border-[var(--border)] last:border-b"
-              >
+          {lead ? (
+            <div className="press-edition">
+              <article className="press-lead">
                 <Link
-                  href={`/prensa/${item.slug}`}
-                  className="press-row group relative grid min-h-11 grid-cols-4 items-center gap-[var(--grid-gutter)] py-[var(--space-md)] focus-visible:outline-offset-4 md:grid-cols-8 lg:grid-cols-12"
+                  href={`/prensa/${lead.slug}`}
+                  className="press-hit press-lead-hit group"
                 >
-                  {item.image ? (
-                    <span className="relative hidden h-20 w-20 overflow-hidden bg-surface lg:col-span-1 lg:block">
-                      <span className="archive-item absolute inset-0">
-                        <span className="archive-media absolute inset-0 origin-center">
-                          <Image
-                            src={item.image}
-                            alt=""
-                            fill
-                            sizes="80px"
-                            className="object-cover"
-                          />
-                        </span>
-                      </span>
+                  <span className="press-lead-copy">
+                    <h2 className="press-lead-title press-story-title">
+                      {lead.title}
+                    </h2>
+                    <PressByline item={lead} />
+                    <span className="press-read">
+                      Abrir la nota
+                      <span aria-hidden="true"> →</span>
                     </span>
-                  ) : (
-                    <span className="hidden bg-surface lg:col-span-1 lg:block lg:h-20 lg:w-20" />
-                  )}
-                  <span className="col-span-4 font-mono text-[0.6875rem] uppercase tabular-nums tracking-[0.16em] text-muted md:col-span-2 lg:col-span-2">
-                    {archiveLabel("Reg.", index + 1)}
-                    {recent ? (
-                      <>
-                        <span aria-hidden="true"> · </span>
-                        <span className="text-signal">Reciente</span>
-                      </>
-                    ) : null}
-                    <span className="mt-1 block tracking-[0.16em]">{item.media}</span>
                   </span>
-                  <span className="col-span-4 text-[1.0625rem] font-medium leading-snug md:col-span-4 lg:col-span-7">
-                    {item.title}
-                  </span>
-                  <span className="col-span-3 font-mono text-[0.75rem] uppercase tracking-[0.08em] text-muted md:col-span-1 lg:col-span-1">
-                    {showDate ? (
-                      <time dateTime={item.dateIso}>{item.date}</time>
-                    ) : null}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="col-span-1 text-right text-foreground md:col-span-1 lg:col-span-1"
-                  >
-                    →
+                  <span className="press-lead-photo archive-item">
+                    <span className="archive-media">
+                      <PressPhoto
+                        item={lead}
+                        sizes="(min-width: 1024px) 58vw, 100vw"
+                        priority
+                      />
+                    </span>
                   </span>
                 </Link>
-              </li>
-            )
-          })}
-        </ul>
+              </article>
+
+              {companions.length > 0 ? (
+                <ul className="press-companions">
+                  {companions.map((item) => (
+                    <li key={item.slug}>
+                      <Link
+                        href={`/prensa/${item.slug}`}
+                        className="press-hit press-companion group"
+                      >
+                        <span className="press-companion-photo">
+                          <PressPhoto
+                            item={item}
+                            sizes="(min-width: 1024px) 28vw, 100vw"
+                          />
+                        </span>
+                        <PressByline item={item} />
+                        <h3 className="press-companion-title press-story-title">
+                          {item.title}
+                        </h3>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+
+              {index.length > 0 ? (
+                <section className="press-index" aria-labelledby="prensa-indice">
+                  <h2 id="prensa-indice" className="press-index-title">
+                    El resto de la edición
+                  </h2>
+                  <ul>
+                    {index.map((item) => (
+                      <li key={item.slug}>
+                        <Link
+                          href={`/prensa/${item.slug}`}
+                          className="press-hit press-index-hit group"
+                        >
+                          <span className="press-index-photo">
+                            <PressPhoto item={item} sizes="88px" />
+                          </span>
+                          <span>
+                            <PressByline item={item} />
+                            <h3 className="press-index-name press-story-title">
+                              {item.title}
+                            </h3>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+            </div>
+          ) : (
+            <p className="press-empty">Aún no hay notas en el archivo.</p>
+          )}
+        </div>
       </div>
     </section>
   )

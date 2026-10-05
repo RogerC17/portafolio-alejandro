@@ -8,23 +8,21 @@ import {
   SITE_NAME,
   SITE_STATEMENT,
 } from "@/data/site"
-import { SocialOrbs } from "@/components/ui/SocialOrbs"
 
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-[var(--border)] bg-surface pb-[var(--safe-bottom)]">
       <div className="editorial-shell py-[var(--space-2xl)]">
         <div className="col-span-4 flex flex-col gap-[var(--space-lg)] lg:col-span-12">
-          <div className="flex items-start gap-[var(--space-md)]">
-            <SoyAlejoMark variant="archivo" className="h-24 w-auto shrink-0 sm:h-28" />
-            <div className="flex flex-col gap-1">
-              <p className="text-[0.9375rem] font-semibold tracking-[-0.02em]">
-                {SITE_NAME}
-              </p>
-              <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
-                {SITE_LOCATION}
-              </p>
-            </div>
+          <div className="flex flex-col items-start gap-2">
+            <SoyAlejoMark
+              variant="lockup"
+              alt={SITE_NAME}
+              className="h-16 w-auto sm:h-[4.75rem]"
+            />
+            <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
+              {SITE_LOCATION}
+            </p>
           </div>
 
           <nav aria-label="Pie de página">
@@ -42,8 +40,6 @@ export function Footer() {
               ))}
             </ul>
           </nav>
-
-          <SocialOrbs />
 
           <p className="text-[0.9375rem] text-muted">{SITE_STATEMENT}</p>
           <p className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-muted">

@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import type { Article } from "@/data/articles"
 import {
   pressItemDescription,
   type PressItem,
@@ -100,38 +99,6 @@ export function createPressMetadata(item: PressItem): Metadata {
       card: imageUrl ? "summary_large_image" : "summary",
       title: item.title,
       description,
-      ...(imageUrl ? { images: [imageUrl] } : {}),
-    },
-  }
-}
-
-export function createArticleMetadata(article: Article): Metadata {
-  const path = `/ideas/${article.slug}`
-  const canonical = canonicalUrl(path)
-  const imageUrl = article.image
-
-  return {
-    title: article.title,
-    description: article.excerpt,
-    authors: [{ name: article.author, url: SITE_URL }],
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title: article.title,
-      description: article.excerpt,
-      url: canonical,
-      siteName: SITE_NAME,
-      locale: "es_CO",
-      type: "article",
-      publishedTime: article.dateIso,
-      authors: [article.author],
-      ...(imageUrl ? { images: [{ url: imageUrl, alt: article.title }] } : {}),
-    },
-    twitter: {
-      card: imageUrl ? "summary_large_image" : "summary",
-      title: article.title,
-      description: article.excerpt,
       ...(imageUrl ? { images: [imageUrl] } : {}),
     },
   }

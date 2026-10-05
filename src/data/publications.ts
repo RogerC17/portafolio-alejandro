@@ -7,9 +7,11 @@ export interface Publication {
   year: string
   datePublished: string
   cover?: string
+  coverBack?: string
+  coverSpine?: string
   spineTitle?: string
   url?: string
-  ctaLabel: string
+  buyUrl: string
   authors: string[]
   publisher?: string
   content: string[]
@@ -39,8 +41,11 @@ export const publications: Publication[] = [
     year: "2026",
     datePublished: "2026",
     cover: "/images/publications/tecnologia.webp",
+    coverBack: "/images/publications/tecnologia-back.webp",
+    coverSpine: "/images/publications/tecnologia-spine.webp",
     url: "https://www.infobae.com/america/inhouse/2026/08/02/tecnologia-real-para-personas-reales-el-libro-de-alejandro-linares-sobre-la-revolucion-digital-centrada-en-las-personas/",
-    ctaLabel: "Leer",
+    buyUrl:
+      "https://www.librerianacional.com/tecnologia-real-para-personas-reales/p",
     authors: [SITE_NAME],
     publisher: "Círculo De Lectores",
     content: ["Publicado por Círculo De Lectores."],
@@ -53,8 +58,11 @@ export const publications: Publication[] = [
     year: "2026",
     datePublished: "2026",
     cover: "/images/publications/liderazgo.webp",
-    url: "https://alejandrolinares.co/las-dos-caras-del-liderazgo/",
-    ctaLabel: "Leer",
+    coverBack: "/images/publications/liderazgo-back.webp",
+    coverSpine: "/images/publications/liderazgo-spine.webp",
+    url: "https://canaltrece.com.co/noticias/las-dos-caras-del-liderazgo-jhon-alejandro-linares/",
+    buyUrl:
+      "https://www.amazon.in/LAS-DOS-CARAS-DEL-LIDERAZGO-ebook/dp/B0H9BQHH8D",
     authors: [SITE_NAME, "Ever Arévalo"],
     content: [
       "Dos visiones, un mismo propósito: formar líderes.",
@@ -70,7 +78,11 @@ export const publications: Publication[] = [
     year: "2026",
     datePublished: "2026",
     cover: "/images/publications/enlace-digital.webp",
-    ctaLabel: "Leer",
+    coverBack: "/images/publications/enlace-digital-back.webp",
+    coverSpine: "/images/publications/enlace-digital-spine.webp",
+    url: "https://canaltrece.com.co/noticias/enlace-digital-libro-conecta-tecnologia/",
+    buyUrl:
+      "https://www.librerianacional.com/enlace-digital-tecnologia-sin-tecnicismos/p",
     authors: [SITE_NAME],
     publisher: "Planeta",
     content: ["Tecnología sin tecnicismos. Publicado por Planeta."],

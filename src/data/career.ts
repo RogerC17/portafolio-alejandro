@@ -389,7 +389,6 @@ export const careerCategories: CareerCategory[] = [
 
 export const careerRelated = [
   { href: "/proyectos", label: "Proyectos" },
-  { href: "/ideas", label: "Ideas" },
   { href: "/publicaciones", label: "Publicaciones" },
 ] as const
 

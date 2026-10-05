@@ -1,29 +1,22 @@
 import type { CareerCategory } from "@/data/career"
-import { contactReels } from "@/data/contact"
-
-function reel(id: (typeof contactReels)[number]["id"]) {
-  const match = contactReels.find((entry) => entry.id === id)
-  if (!match) {
-    throw new Error(`Missing contact reel: ${id}`)
-  }
-  return match
-}
+import { heroFrame, type CareerFrame } from "@/data/career-frames"
 
 export type CinematicChapter = {
   id: string
   category: CareerCategory
   title: string
   lead: string
-  video: {
-    src: string
-    poster: string
-    label: string
-  }
+  /** Columna de texto: start = izquierda, end = derecha. La foto ocupa el lado libre. */
+  side: "start" | "end"
 }
 
-/** Capítulos cinemáticos: técnica tipo Rockstar, identidad Archivo Vivo. */
-export const cinematicHero = {
-  video: reel("nubes"),
+export const cinematicHero: {
+  frame: CareerFrame
+  title: string
+  kicker: string
+  lead: string
+} = {
+  frame: heroFrame,
   title: "Trayectoria",
   kicker: "2003—2026",
   lead:
@@ -36,20 +29,20 @@ export const cinematicChapters: CinematicChapter[] = [
     category: "Cargos",
     title: "Cargos",
     lead: "Responsabilidades públicas, dirección y liderazgo institucional.",
-    video: reel("super"),
+    side: "start",
   },
   {
     id: "formacion",
     category: "Formación",
     title: "Formación",
     lead: "Derecho, políticas públicas y gobierno digital.",
-    video: reel("seguridad"),
+    side: "end",
   },
   {
     id: "reconocimientos",
     category: "Reconocimientos",
     title: "Reconocimientos",
     lead: "Premios y galardones a la gestión, los medios y el liderazgo.",
-    video: reel("energia"),
+    side: "start",
   },
 ]

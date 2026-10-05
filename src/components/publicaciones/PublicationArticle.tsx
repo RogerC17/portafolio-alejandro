@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { PublicationActions } from "@/components/publicaciones/PublicationActions"
 import { PublicationCover } from "@/components/publicaciones/PublicationCover"
 import {
   publicationAuthorsLabel,
@@ -83,21 +84,10 @@ export function PublicationArticle({
               {paragraph}
             </p>
           ))}
-          {publication.url ? (
-            <p className="mt-[var(--space-xl)]">
-              <a
-                href={publication.url}
-                rel="noreferrer"
-                className="group relative inline-flex min-h-11 items-center gap-2 py-2 text-[0.9375rem] font-medium text-foreground"
-              >
-                {publication.ctaLabel}
-                <span aria-hidden="true" className="text-foreground">
-                  →
-                </span>
-                <span className="nav-underline absolute inset-x-0 bottom-1 h-px group-hover:scale-x-100" />
-              </a>
-            </p>
-          ) : null}
+          <PublicationActions
+            buyUrl={publication.buyUrl}
+            noteUrl={publication.url}
+          />
         </div>
       </div>
 
@@ -131,14 +121,19 @@ export function PublicationArticle({
                     <p className="mt-[var(--space-sm)] max-w-[28ch] text-[1.25rem] font-semibold leading-snug tracking-[-0.02em]">
                       {item.title}
                     </p>
-                    <p className="mt-[var(--space-sm)] text-[0.9375rem] font-medium text-foreground">
-                      {item.ctaLabel}
-                      <span aria-hidden="true" className="text-foreground">
-                        {" "}
-                        →
-                      </span>
-                    </p>
                   </Link>
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-[var(--space-sm)] inline-flex min-h-11 items-center text-[0.9375rem] font-medium text-foreground focus-visible:outline-offset-4"
+                    >
+                      Ver la nota
+                      <span className="sr-only">, se abre en otra pestaña</span>
+                      <span aria-hidden="true"> →</span>
+                    </a>
+                  ) : null}
                 </li>
               ))}
             </ul>

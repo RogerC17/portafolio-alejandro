@@ -50,12 +50,9 @@ export function CareerPrologue() {
           style={{ y: copyY, opacity: copyOpacity }}
           className="col-span-4 md:col-span-5 lg:col-span-6"
         >
-          <p className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-muted">
-            [02]
-          </p>
           <h1
             id="trayectoria-heading"
-            className="mt-[var(--space-sm)] text-[clamp(2.5rem,4vw+1rem,4.5rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.04em]"
+            className="text-[clamp(2.5rem,4vw+1rem,4.5rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.04em]"
           >
             Trayectoria
           </h1>
