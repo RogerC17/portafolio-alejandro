@@ -1,3 +1,79 @@
+---
+name: Alejandro Linares
+description: Portafolio archivo. El panel local añade el oro de marca y los controles de ficha; el sitio público conserva las secciones 1 a 40.
+colors:
+  archive-gold: "#c9a45c"
+  archive-gold-hover: "#d7b56d"
+  alert-rose: "#e7b2b2"
+  hairline: "#2a2c2e"
+  hairline-strong: "#4a4d51"
+  rail-wash: "#222426"
+  preview-well: "#0c0d0e"
+rounded:
+  control: "0.25rem"
+spacing:
+  nav: "0.25rem"
+  label: "0.35rem"
+  stack: "0.9rem"
+  screen: "1.5rem"
+  workspace: "2rem"
+components:
+  button-primary:
+    backgroundColor: "{colors.archive-gold}"
+    textColor: "#101112"
+    rounded: "{rounded.control}"
+    padding: "0 1.15rem"
+    height: "2.75rem"
+  button-primary-hover:
+    backgroundColor: "{colors.archive-gold-hover}"
+    textColor: "#101112"
+    rounded: "{rounded.control}"
+    padding: "0 1.15rem"
+    height: "2.75rem"
+  button-save-saved:
+    backgroundColor: "#f2f0e9"
+    textColor: "#101112"
+    rounded: "{rounded.control}"
+    padding: "0 1.15rem"
+    height: "2.75rem"
+  button-nav-current:
+    backgroundColor: "{colors.archive-gold}"
+    textColor: "#101112"
+    rounded: "{rounded.control}"
+    padding: "0 0.75rem"
+    height: "2.75rem"
+  button-nav-hover:
+    backgroundColor: "{colors.rail-wash}"
+    textColor: "#f2f0e9"
+    rounded: "{rounded.control}"
+    padding: "0 0.75rem"
+    height: "2.75rem"
+  button-ghost:
+    backgroundColor: "transparent"
+    textColor: "#f2f0e9"
+    rounded: "{rounded.control}"
+    padding: "0 0.75rem"
+    height: "2.75rem"
+  button-tool:
+    backgroundColor: "transparent"
+    textColor: "#f2f0e9"
+    rounded: "{rounded.control}"
+    padding: "0 0.7rem"
+    height: "2.75rem"
+  button-tool-danger-hover:
+    backgroundColor: "transparent"
+    textColor: "{colors.alert-rose}"
+    rounded: "{rounded.control}"
+    padding: "0 0.7rem"
+    height: "2.75rem"
+  input-field:
+    backgroundColor: "#101112"
+    textColor: "#f2f0e9"
+    rounded: "{rounded.control}"
+    padding: "0.65rem 0.75rem"
+    height: "2.75rem"
+---
+
 # Rediseño completo de alejandrolinares.co — Guía para Cursor
 
 Actúa como desarrollador frontend senior, diseñador UX/UI y arquitecto web.
@@ -1396,3 +1472,137 @@ Cuando termines:
 - corrige todos los errores relevantes
 
 y entrégame el resumen del trabajo realizado.
+
+<!-- Panel local: extensión. No sustituye las secciones 1–40 del sitio público. -->
+
+# Panel local de archivo
+
+Lo que sigue documenta solo el panel de administración local. Grafito (`#101112`), surface (`#161719`), marfil (`#F2F0E9`) y muted (`#9A9A9A`) siguen siendo los de la sección 5; aquí no se redefinen.
+
+## Overview
+
+**Creative North Star: "El escritorio de archivo"**
+
+El panel local es el mismo grafito del archivo, usado para corregir fichas que ya existen. Es un escritorio con riel, formulario y una sola acción de asentamiento. La densidad es de formulario. Quien entra lee «Archivo» en serif, escribe dos campos y pulsa Entrar.
+
+El oro es una marca. La sección activa, Entrar y Guardar lo llevan; el resto permanece en marfil, gris y filete. Newsreader no baja de esa única palabra. Al guardar, el botón deja el oro y se asienta en marfil con la etiqueta «Guardado». La nota fija recuerda que GoDaddy cambia solo cuando se publica la exportación.
+
+Estas secciones documentan el panel local. El sistema del sitio público sigue en las secciones 1 a 40. Grafito, surface, marfil y muted siguen siendo los de la paleta ya escrita.
+
+**Key Characteristics:**
+
+- Escritorio de fichas.
+- Oro solo en la sección activa, Entrar y Guardar.
+- Archivo en etiquetas y campos; Newsreader solo en la palabra Archivo.
+- Riel en escritorio, selector en móvil, Guardar anclado abajo.
+- Profundidad tonal: filete, surface y barra esmerilada.
+
+## Colors
+
+El panel reutiliza grafito, surface, marfil y muted de la sección 5. Añade un oro de marca, una rosa de alerta y cuatro grafitos de filete.
+
+### Primary
+
+- **Oro de archivo** (`#c9a45c`): fondo de la sección activa, de Entrar y de Guardar. El texto sobre el oro es grafito.
+- **Oro claro** (`#d7b56d`): el mismo control al pasar el cursor, mientras no está en «Guardado».
+
+### Tertiary
+
+- **Rosa de alerta** (`#e7b2b2`): texto del aviso de error y, al pasar el cursor, borde y texto de Quitar.
+
+### Neutral
+
+- **Filete** (`#2a2c2e`): borde de campos, herramientas, riel y barra de guardado.
+- **Filete marcado** (`#4a4d51`): borde del campo o de la herramienta al pasar el cursor.
+- **Lavado del riel** (`#222426`): fondo de una sección inactiva del riel al pasar el cursor.
+- **Pozo de previsualización** (`#0c0d0e`): fondo detrás de la fotografía subida.
+
+**The Mark of Gold Rule.** En el panel, el oro solo pinta la sección activa, Entrar y Guardar. Un campo, un lede o un botón de herramienta en oro rompe la marca.
+
+## Typography
+
+**Display Font:** Newsreader (with Georgia, serif), solo en la palabra Archivo.
+**Body Font:** Archivo (with Segoe UI, sans-serif)
+**Label Font:** Archivo, en tamaño de etiqueta. Este panel no usa mono.
+
+**Character:** Una grotesca de trabajo para todo lo que se lee y se escribe, y una sola palabra en serif para nombrar el escritorio.
+
+### Hierarchy
+
+- **Display** (500, 2.4rem, line-height 1, letter-spacing -0.03em; 1.8rem bajo 1023px): la palabra Archivo, en el login y en el riel.
+- **Headline** (500, 1.65rem, letter-spacing -0.02em, Archivo): el nombre de la sección en el área de trabajo.
+- **Title** (500, 1rem, Archivo): el título de una ficha.
+- **Body** (400, 1rem, line-height 1.45): campos, botones y el lede (muted, medida 42rem).
+- **Label** (400, 0.82rem, muted): la etiqueta sobre cada campo. La meta de ficha y la nota de publicación usan 0.85rem.
+
+**The Single Serif Word Rule.** Newsreader se reserva para la palabra Archivo. Títulos de sección, etiquetas y valores permanecen en Archivo.
+
+## Layout
+
+En escritorio el panel son dos columnas: un riel de 15.5rem pegado arriba, a la altura del viewport, en surface y con filete a la derecha, y un área de trabajo hasta 68rem, con padding de 2rem y 7rem abajo para quedar libre de la barra. La barra de guardado es fija, desde el borde del riel hasta la derecha de la ventana: la nota a la izquierda, Guardar a la derecha.
+
+Bajo 1023px el riel se aplana en una barra sticky. La lista desaparece, entra el selector de sección, la palabra Archivo baja a 1.8rem y la barra de guardado ocupa todo el ancho, apilada, con Guardar al 100%. El padding inferior del área pasa a 9rem. La grilla de la ficha y la fila de fuentes pasan a una columna.
+
+El ritmo reutilizado es 0.25rem entre secciones del riel, 0.35rem entre etiqueta y campo, 0.9rem en el stack y en la grilla, 1.5rem de padding de pantalla y 2rem en el área de trabajo. Los controles comparten una altura mínima de 2.75rem.
+
+**The Anchored Save Rule.** Guardar no se desplaza con el formulario. En escritorio queda abajo a la derecha; bajo 1023px, a todo el ancho, con la nota de publicación encima.
+
+## Elevation & Depth
+
+El panel es plano. No hay sombra proyectada. El riel se separa del grafito por ser surface y por un filete. La barra de guardado permanece fija, con surface al 92% y un desenfoque de 10px, más el mismo filete en el borde superior. El foco es un anillo de 2px en marfil, separado 2px del control. Un botón deshabilitado baja al 55% de opacidad y muestra el cursor de espera. El cambio de color es instantáneo.
+
+Con `prefers-reduced-motion` el scroll del panel queda en el comportamiento automático del navegador.
+
+**The Flat Desk Rule.** Si hace falta profundidad, se cambia el tono o se esmerila la barra. No se añade box-shadow.
+
+## Shapes
+
+Esquinas apenas redondeadas (0.25rem) en campos, botones, selector y herramientas. La ficha no es una tarjeta: es un bloque separado por un filete superior, sin radio propio. La fotografía de previsualización es un rectángulo sin radio, alto máximo 9rem, sobre el pozo oscuro.
+
+## Components
+
+### Buttons
+
+- **Shape:** esquinas apenas redondeadas (0.25rem), alto mínimo 2.75rem, sin borde cuando el fondo es oro.
+- **Primary:** oro de archivo, texto grafito, peso 600, padding horizontal 1.15rem. Entrar y Guardar comparten esta marca.
+- **Hover / Focus:** el oro pasa a oro claro, salvo en «Guardado», que permanece marfil. El foco es el anillo de marfil de 2px.
+- **Guardado:** fondo marfil, texto grafito, etiqueta «Guardado». Mientras guarda, el botón se deshabilita y dice «Guardando…».
+- **Ghost:** Salir. Fondo transparente, filete, texto marfil, padding horizontal 0.75rem.
+- **Tool:** Añadir, Subir y Bajar. Mismo trazo que Salir, con padding horizontal 0.7rem. Quitar, al pasar el cursor, toma la rosa de alerta en borde y texto.
+
+### Navigation
+
+El riel lista las secciones que ya existen, en Archivo, alineadas a la izquierda, sin números. La activa es oro con texto grafito y peso 600. Las demás son transparentes; al pasar el cursor toman el lavado del riel. Bajo 1023px la lista se oculta y un selector a ancho completo ocupa su lugar. Salir permanece en la fila de la palabra Archivo.
+
+### Inputs / Fields
+
+- **Style:** fondo grafito, filete, radio 0.25rem, padding 0.65rem 0.75rem, alto mínimo 2.75rem. La etiqueta muted va encima (0.82rem). El área de texto parte de 4.5rem y crece en vertical.
+- **Focus:** anillo de marfil de 2px, separado 2px. Al pasar el cursor el filete pasa a filete marcado.
+- **Error:** el aviso usa la rosa de alerta y reserva 1.4rem de alto.
+- La casilla es el control nativo, en fila con su etiqueta, alto mínimo 2.75rem.
+
+### Cards / Containers
+
+La ficha es un registro. Filete superior, padding vertical 0.85rem y 1rem, título en peso 500 y meta muted a 0.85rem. Cerrada, el cuerpo no se muestra. El área de trabajo no envuelve el formulario en una tarjeta.
+
+### Barra de guardado
+
+Fija al fondo. La nota, muted a 0.85rem y con medida de 42rem, dice que el sitio de este equipo se actualiza al recargar y que GoDaddy cambia cuando se publica la exportación. Guardar queda a la derecha. Bajo 1023px la nota queda arriba y el botón ocupa todo el ancho.
+
+## Do's and Don'ts
+
+Guardrails del panel local. No reescriben las secciones 1 a 40.
+
+### Do:
+
+- **Do** reutilizar grafito, surface, marfil y muted de la sección 5 sin redefinirlos.
+- **Do** reservar el oro de archivo para la sección activa, Entrar y Guardar, y asentar Guardar en marfil cuando el estado es «Guardado».
+- **Do** mantener Newsreader en la palabra Archivo y Archivo en etiquetas, campos y títulos de sección.
+- **Do** anclar la barra de guardado y, bajo 1023px, cambiar el riel por el selector.
+
+### Don't:
+
+- **Don't** pintar de oro campos, ledes, herramientas o el fondo del riel.
+- **Don't** usar Newsreader fuera de la palabra Archivo en este panel.
+- **Don't** añadir tarjetas de resumen, un menú numerado ni un control que cree secciones o cambie la maqueta pública.
+- **Don't** proyectar sombras. La profundidad del panel es tonal y el desenfoque de la barra.

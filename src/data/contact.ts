@@ -1,21 +1,21 @@
+import { siteContent } from "@/content/load"
 import { SITE_LOCATION } from "@/data/site"
 import { socialLinks } from "@/data/social"
 
 const linkedIn = socialLinks.find((link) => link.label === "LinkedIn")
 
-export const contactLead = "Este archivo usa canales reales, no un formulario."
+export const contactLead = siteContent.contact.lead
 
-export const contactQuote =
-  "Un mejor futuro es posible cuando las ideas se convierten en acciones."
+export const contactQuote = siteContent.contact.quote
 
-export const contactTitle = "Conversemos sobre lo que viene."
+export const contactTitle = siteContent.contact.title
 
 export const contactCta = {
-  label: "Trabajemos juntos",
+  label: siteContent.contact.ctaLabel,
   href:
     linkedIn?.href ??
     "https://www.linkedin.com/in/jhon-alejandro-linares-camberos-58a1a3245",
-} as const
+}
 
 export const contactLocation = SITE_LOCATION
 

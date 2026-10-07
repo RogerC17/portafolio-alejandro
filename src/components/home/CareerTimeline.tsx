@@ -467,8 +467,9 @@ function CareerCard({
     targetY.current = 0
   }
 
-  const imageUrl = event.image ? `url('${event.image}')` : "none"
-  const imageFocus = event.imagePosition ?? "center 30%"
+  const plate = event.photo?.src ?? event.image
+  const imageUrl = plate ? `url('${plate}')` : "none"
+  const imageFocus = event.photo?.position ?? event.imagePosition ?? "center 30%"
 
   return (
     <article
@@ -485,7 +486,19 @@ function CareerCard({
       onPointerLeave={handlePointerLeave}
     >
       <div className="career-card-shadow" aria-hidden="true" />
-      <div className="career-card-image" aria-hidden="true" />
+      <div className="career-card-image" aria-hidden={event.photo ? undefined : true}>
+        {event.photo ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={event.photo.src}
+            alt={event.photo.alt}
+            width={event.photo.width}
+            height={event.photo.height}
+            className="career-card-photo"
+            draggable={false}
+          />
+        ) : null}
+      </div>
       <div className="career-card-content">
         <p className="career-card-meta">
           <span className="tabular-nums">{careerPeriod(event)}</span>

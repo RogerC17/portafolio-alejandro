@@ -45,19 +45,18 @@ export function CareerScrollFrames({
   }, [safeIndex])
 
   return (
-    <div
-      className="career-cine-frames"
-      data-place={place}
-      aria-hidden="true"
-    >
+    <div className="career-cine-frames" data-place={place}>
       {frames.map((frame, index) => {
         const isOn = index === safeIndex
         const isHold = index === holdIndex && !isOn
         const showWash = isOn || isHold
+        const alt = isOn ? (frame.alt ?? "") : ""
+        const scene = Boolean(frame.alt)
         return (
           <div
             key={`${frame.src}-${index}`}
             className={`career-frame${isOn ? " is-on" : ""}${isHold ? " is-hold" : ""}`}
+            aria-hidden={alt ? undefined : true}
           >
             <div className="career-frame-fit">
               {showWash ? (
@@ -74,22 +73,22 @@ export function CareerScrollFrames({
               {zoom && isOn ? (
                 <motion.img
                   src={frame.src}
-                  alt=""
+                  alt={alt}
                   draggable={false}
                   width={frame.width}
                   height={frame.height}
-                  className="career-frame-img is-scrub"
+                  className={`career-frame-img is-scrub${scene ? " is-scene" : ""}`}
                   style={{ scale: zoom }}
                 />
               ) : (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={frame.src}
-                  alt=""
+                  alt={alt}
                   draggable={false}
                   width={frame.width}
                   height={frame.height}
-                  className="career-frame-img"
+                  className={`career-frame-img${scene ? " is-scene" : ""}`}
                   loading={index <= safeIndex + 1 ? "eager" : "lazy"}
                 />
               )}

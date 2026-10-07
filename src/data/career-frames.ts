@@ -8,6 +8,7 @@ export type CareerFrame = {
   src: string
   width: number
   height: number
+  alt?: string
 }
 
 const stage = {
@@ -60,5 +61,13 @@ const framesByEvent: Record<string, CareerFrame> = {
 }
 
 export function frameForEvent(event: CareerEvent): CareerFrame {
+  if (event.photo) {
+    return {
+      src: event.photo.src,
+      width: event.photo.width,
+      height: event.photo.height,
+      alt: event.photo.alt,
+    }
+  }
   return framesByEvent[event.id] ?? stage.linares
 }

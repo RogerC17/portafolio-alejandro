@@ -7,10 +7,10 @@ import { socialLinks } from "@/data/social"
 function DockMark() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="7.5" cy="12" r="2.1" />
-      <circle cx="16.5" cy="6.8" r="2.1" />
-      <circle cx="16.5" cy="17.2" r="2.1" />
-      <path d="M9.3 11.1 14.4 8.1M9.3 12.9 14.4 15.9" />
+      <circle cx="7.2" cy="12" r="1.7" />
+      <circle cx="16.6" cy="6.6" r="1.7" />
+      <circle cx="16.6" cy="17.4" r="1.7" />
+      <path d="M8.8 11.2 14.8 7.6M8.8 12.8 14.8 16.4" />
     </svg>
   )
 }

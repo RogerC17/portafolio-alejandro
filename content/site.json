@@ -1,0 +1,1537 @@
+{
+  "site": {
+    "name": "Alejandro Linares",
+    "title": "Alejandro Linares | Gobernanza digital, tecnología y liderazgo",
+    "description": "Alejandro Linares es abogado y experto en gobernanza digital, tecnología y políticas públicas. Conoce su trayectoria, proyectos y publicaciones.",
+    "location": "Bogotá / Colombia",
+    "statement": "Ideas para un futuro más humano y digital.",
+    "role": "Abogado · Gobernanza digital · Tecnología · Liderazgo"
+  },
+  "home": {
+    "heroLead": "Creo en el poder de la tecnología y las instituciones para generar oportunidades reales en la vida de las personas.",
+    "manifestoLines": [
+      "La tecnología no transforma sociedades.",
+      "Las personas que saben utilizarla, sí."
+    ],
+    "manifestoSupport": "Cuenta con una sólida formación académica que incluye un doctorando en Gobierno y una maestría en Políticas Públicas. Es director del programa de tecnología más visto en formatos digitales, Especiales Enlace Trece, ha entrevistado destacados expertos del universo tecnológico, acercando la tecnología a los ciudadanos."
+  },
+  "contact": {
+    "lead": "Este archivo usa canales reales, no un formulario.",
+    "quote": "Un mejor futuro es posible cuando las ideas se convierten en acciones.",
+    "title": "Conversemos sobre lo que viene.",
+    "ctaLabel": "Trabajemos juntos"
+  },
+  "social": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/jhon-alejandro-linares-camberos-58a1a3245"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "href": "https://x.com/alejolinaresca"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/alejolinaresca/"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "href": "https://www.youtube.com/@AlejandroLinaresCamberos"
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "href": "https://www.facebook.com/AlejoLinaresC"
+    },
+    {
+      "id": "tiktok",
+      "label": "TikTok",
+      "href": "https://www.tiktok.com/@alejo.linares8"
+    }
+  ],
+  "focus": [
+    {
+      "id": "eje-gobernanza",
+      "index": "01",
+      "title": "Gobernanza digital",
+      "lead": "Políticas públicas, transformación del Estado, regulación y ciudadanía.",
+      "image": "/images/focus/gobernanza.webp",
+      "alt": "Alejandro Linares",
+      "register": "Políticas públicas",
+      "objectPosition": "center 18%"
+    },
+    {
+      "id": "eje-liderazgo",
+      "index": "02",
+      "title": "Liderazgo",
+      "lead": "Gestión, equipos, dirección y transformación organizacional.",
+      "image": "/images/focus/liderazgo.webp",
+      "alt": "Alejandro Linares en entrevista en Especiales Enlace Trece",
+      "register": "Canal Trece",
+      "objectPosition": "center 48%"
+    },
+    {
+      "id": "eje-medios",
+      "index": "03",
+      "title": "Medios",
+      "lead": "Televisión pública, contenidos y comunicación.",
+      "image": "/images/focus/medios.webp",
+      "alt": "Alejandro Linares en las oficinas de Canal Trece",
+      "register": "Canal Trece · Contenidos",
+      "objectPosition": "center 18%"
+    },
+    {
+      "id": "eje-tecnologia",
+      "index": "04",
+      "title": "Tecnología",
+      "lead": "IA, innovación, ciberseguridad y educación.",
+      "image": "/images/focus/tecnologia.webp",
+      "alt": "Alejandro Linares en Especiales Enlace Trece",
+      "register": "Especiales Enlace Trece",
+      "objectPosition": "center 24%"
+    }
+  ],
+  "pressLead": "Este archivo es un registro, no un recorte de logos.",
+  "press": [
+    {
+      "slug": "television-publica-forbes",
+      "media": "Forbes",
+      "title": "Televisión pública con propósito: la visión estratégica que convirtió a Canal Trece en referente de innovación social",
+      "url": "https://forbes.co/actualidad/television-publica-con-proposito-la-vision-estrategica-que-convirtio-a-canal-trece-en-referente-de-innovacion-social",
+      "date": "10 de abril de 2026",
+      "dateIso": "2026-04-10",
+      "image": "/images/press/forbes.webp"
+    },
+    {
+      "slug": "tecnologia-real-infobae",
+      "media": "Infobae",
+      "title": "Tecnología real para personas reales: el libro de Alejandro Linares sobre la revolución digital centrada en las personas",
+      "url": "https://www.infobae.com/america/inhouse/2026/08/02/tecnologia-real-para-personas-reales-el-libro-de-alejandro-linares-sobre-la-revolucion-digital-centrada-en-las-personas/",
+      "date": "2 de agosto de 2026",
+      "dateIso": "2026-08-02",
+      "image": "/images/press/infobae.webp"
+    },
+    {
+      "slug": "tecnologia-real-el-colombiano",
+      "media": "El Colombiano",
+      "title": "Tecnología real para personas reales",
+      "url": "https://www.elcolombiano.com/informes-comerciales/las-marcas-hablan/tecnologia-real-personas-reales-libro-jhon-alejandro-linares-EE39681511",
+      "date": "12 de agosto de 2026",
+      "dateIso": "2026-08-12",
+      "image": "/images/press/el-colombiano.webp"
+    },
+    {
+      "slug": "nominacion-latam-digital-2026",
+      "media": "Canal Trece",
+      "title": "Gerente de Canal Trece, Alejandro Linares, nominado a Líder Digital del Año en Latam Digital 2026",
+      "url": "https://canaltrece.com.co/noticias/gerente-de-canal-trece-alejandro-linares-nominado-a-lider-digital-del-ano-en-latam-digital-2026/",
+      "date": "27 de abril de 2026",
+      "dateIso": "2026-04-27",
+      "image": "/images/press/canal-trece.webp"
+    },
+    {
+      "slug": "narrativas-ambiente-extrategia",
+      "media": "Extrategia Medios",
+      "title": "Jhon Alejandro Linares Camberos impulsa desde Canal Trece nuevas narrativas para proteger el ambiente",
+      "url": "https://extrategiamedios.com/jhon-alejandro-linares-camberos-impulsa-desde-canal-trece-nuevas-narrativas-para-proteger-el-ambiente/",
+      "date": "16 de julio de 2026",
+      "dateIso": "2026-07-16",
+      "image": "/images/press/ambiente.webp"
+    },
+    {
+      "slug": "dos-caras-liderazgo-tvnet",
+      "media": "TVNet Noticias",
+      "title": "Jhon Alejandro Linares Camberos presenta Las dos caras del liderazgo, un libro que invita a transformar desde el propósito",
+      "url": "https://www.tvnetnoticias.com/jhon-alejandro-linares-camberos-presenta-las-dos-caras-del-liderazgo-un-libro-que-invita-a-transformar-desde-el-proposito/",
+      "image": "/images/press/dos-caras.webp"
+    },
+    {
+      "slug": "fima-2026-la-tribuna",
+      "media": "Periódico La Tribuna",
+      "title": "Jhon Alejandro Linares Camberos lideró en FIMA 2026 un diálogo nacional sobre el papel de los medios en la protección ambiental",
+      "url": "https://www.periodicolatribuna.com/jhon-alejandro-linares-camberos-lidero-en-fima-2026-un-dialogo-nacional-sobre-el-papel-de-los-medios-en-la-proteccion-ambiental/",
+      "date": "16 de julio de 2026",
+      "dateIso": "2026-07-16",
+      "image": "/images/press/fima.webp"
+    },
+    {
+      "slug": "lideres-digitales-periodismo-en-accion",
+      "media": "Periodismo en Acción",
+      "title": "Jhon Alejandro Linares, gerente de Canal Trece, entre los líderes digitales más destacados de Latinoamérica",
+      "url": "https://www.periodismoenaccion.com.co/2026/07/16/jhon-alejandro-linares-gerente-de-canal-trece-entre-los-lideres-digitales-mas-destacados-de-latinoamerica/",
+      "date": "16 de julio de 2026",
+      "dateIso": "2026-07-16",
+      "image": "/images/press/lideres.webp"
+    },
+    {
+      "slug": "liderazgo-proposito-el-informativo",
+      "media": "El Informativo Colombia",
+      "title": "Liderazgo con propósito: Jhon Alejandro Linares Camberos presenta su nuevo libro \"Las dos caras del liderazgo\"",
+      "url": "https://elinformativocolombia.com/liderazgo-con-proposito-jhon-alejandro-linares-camberos-presenta-su-nuevo-libro-las-dos-caras-del-liderazgo",
+      "image": "/images/press/informativo.webp"
+    },
+    {
+      "slug": "television-publica-instagram",
+      "media": "Instagram",
+      "title": "La televisión pública sí puede competir: el giro estratégico de Canal Trece bajo la lupa de Forbes",
+      "url": "https://www.instagram.com/p/Da1N52Pp-Oc/",
+      "image": "/images/press/zipa.webp"
+    },
+    {
+      "slug": "television-publica-zipa-exiliados",
+      "media": "Zipa Exiliados",
+      "title": "La televisión pública sí puede competir: el giro estratégico de Canal Trece bajo la lupa de Forbes",
+      "url": "https://zipa-exiliados.com/la-television-publica-si-puede-competir-el-giro-estrategico-de-canal-trece-bajo-la-lupa-de-forbes/",
+      "date": "15 de julio de 2026",
+      "dateIso": "2026-07-15",
+      "image": "/images/press/zipa.webp"
+    },
+    {
+      "slug": "mirada-transforma-extrategia",
+      "media": "Extrategia Medios",
+      "title": "Una mirada que transforma: Jhon Alejandro Linares Camberos presenta ‘Las dos caras del liderazgo’",
+      "url": "https://extrategiamedios.com/una-mirada-que-transforma-jhon-alejandro-linares-camberos-presenta-las-dos-caras-del-liderazgo/",
+      "date": "15 de julio de 2026",
+      "dateIso": "2026-07-15",
+      "image": "/images/press/dos-caras.webp"
+    },
+    {
+      "slug": "fima-debate-la-tribuna",
+      "media": "Periódico La Tribuna",
+      "title": "Canal Trece llevó el debate ambiental a FIMA 2026 con un llamado a transformar la comunicación",
+      "url": "https://www.periodicolatribuna.com/jhon-alejandro-linares-camberos-presenta-las-dos-caras-del-liderazgo-un-libro-que-invita-a-transformar-desde-el-proposito/",
+      "date": "15 de julio de 2026",
+      "dateIso": "2026-07-15",
+      "image": "/images/press/lideres.webp"
+    },
+    {
+      "slug": "dos-caras-liderazgo-la-tribuna",
+      "media": "Periódico La Tribuna",
+      "title": "Jhon Alejandro Linares Camberos presenta Las dos caras del liderazgo, un libro que invita a transformar desde el propósito",
+      "url": "https://www.periodicolatribuna.com/jhon-alejandro-linares-camberos-presenta-las-dos-caras-del-liderazgo-un-libro-que-invita-a-transformar-desde-el-proposito/",
+      "date": "15 de julio de 2026",
+      "dateIso": "2026-07-15",
+      "image": "/images/press/dos-caras.webp"
+    },
+    {
+      "slug": "forbes-facebook",
+      "media": "Facebook",
+      "title": "Forbes resalta el trabajo de Alejandro Linares al mando del Canal Trece.",
+      "url": "https://www.facebook.com/story.php?story_fbid=1529993295797887&id=100063616928756",
+      "image": "/images/press/facebook.webp"
+    },
+    {
+      "slug": "limites-presupuesto-canal-1",
+      "media": "Canal 1",
+      "title": "Los límites no deben estar en el presupuesto: Alejandro Linares, gerente del Canal 13",
+      "url": "https://canal1.com.co/noticias/nacional/los-limites-no-deben-estar-en-el-presupuesto-alejandro-linares-gerente-del-canal-13/",
+      "date": "24 de febrero de 2025",
+      "dateIso": "2025-02-24",
+      "image": "/images/press/canal-1.webp"
+    },
+    {
+      "slug": "innovacion-tecnologica-extrategia",
+      "media": "Extrategia Medios",
+      "title": "Alejandro Linares posiciona a Canal 13 como líder en innovación tecnológica en Colombia",
+      "url": "https://extrategiamedios.com/alejandro-linares-posiciona-a-canal-13-como-lider-en-innovacion-tecnologica-en-colombia/",
+      "date": "10 de enero de 2025",
+      "dateIso": "2025-01-10",
+      "image": "/images/press/innovacion.webp"
+    },
+    {
+      "slug": "premios-tal-2024-extrategia",
+      "media": "Extrategia Medios",
+      "title": "Alejandro Linares triunfa en Premios TAL 2024 con reconocimientos de relevancia internacional.",
+      "url": "https://extrategiamedios.com/canal-trece-triunfa-en-premios-tal-2024-con-reconocimientos-unicos/",
+      "date": "20 de diciembre de 2024",
+      "dateIso": "2024-12-20",
+      "image": "/images/press/tal.webp"
+    },
+    {
+      "slug": "mip-cancun-produ",
+      "media": "Produ",
+      "title": "Alejandro Linares de Canal Trece: MIP Cancun fue un espacio para distribuir contenidos y explorar coproducciones",
+      "url": "https://www.produ.com/television/noticias/alejandro-linares-de-canal-trece-mip-cancun-fue-un-espacio-para-distribuir-nuestros-contenidos-y-explorar-posibilidades-de-coproduccion/",
+      "date": "22 de noviembre de 2024",
+      "dateIso": "2024-11-22",
+      "image": "/images/press/produ.webp"
+    },
+    {
+      "slug": "alta-gerencia-2024-extrategia",
+      "media": "Extrategia Medios",
+      "title": "Alejandro Linares, líder de Canal Trece, recibe el Premio Nacional de Alta Gerencia 2024",
+      "url": "https://extrategiamedios.com/alejandro-linares-lider-de-canal-trece-recibe-el-premio-nacional-de-alta-gerencia-2024/",
+      "date": "4 de diciembre de 2024",
+      "dateIso": "2024-12-04",
+      "image": "/images/press/gerencia.webp"
+    },
+    {
+      "slug": "cinco-retos-digitales-el-tiempo",
+      "media": "El Tiempo",
+      "title": "Cinco retos digitales del gobierno Petro",
+      "url": "https://blogs.eltiempo.com/palabras-mass/2022/08/12/cinco-retos-digitales-del-gobierno-petro/",
+      "date": "12 de agosto de 2022",
+      "dateIso": "2022-08-12",
+      "image": "/images/press/retos.webp"
+    }
+  ],
+  "publicationsLead": "Este archivo no es un catálogo.",
+  "publications": [
+    {
+      "slug": "tecnologia-real-para-personas-reales",
+      "title": "Tecnología real para personas reales",
+      "description": "El libro de Alejandro Linares sobre la revolución digital centrada en las personas.",
+      "year": "2026",
+      "datePublished": "2026",
+      "buyUrl": "https://www.librerianacional.com/tecnologia-real-para-personas-reales/p",
+      "authors": [
+        "Alejandro Linares"
+      ],
+      "content": [
+        "Publicado por Círculo De Lectores."
+      ],
+      "spineTitle": "Tecnología real",
+      "cover": "/images/publications/tecnologia.webp",
+      "coverBack": "/images/publications/tecnologia-back.webp",
+      "coverSpine": "/images/publications/tecnologia-spine.webp",
+      "url": "https://www.infobae.com/america/inhouse/2026/08/02/tecnologia-real-para-personas-reales-el-libro-de-alejandro-linares-sobre-la-revolucion-digital-centrada-en-las-personas/",
+      "publisher": "Círculo De Lectores"
+    },
+    {
+      "slug": "las-dos-caras-del-liderazgo",
+      "title": "Las dos caras del liderazgo",
+      "description": "Libro de Alejandro Linares y Ever Arévalo.",
+      "year": "2026",
+      "datePublished": "2026",
+      "buyUrl": "https://www.amazon.in/LAS-DOS-CARAS-DEL-LIDERAZGO-ebook/dp/B0H9BQHH8D",
+      "authors": [
+        "Alejandro Linares",
+        "Ever Arévalo"
+      ],
+      "content": [
+        "Dos visiones, un mismo propósito: formar líderes.",
+        "Un líder no tiene que ser perfecto, pero sí debe estar dispuesto a crecer."
+      ],
+      "spineTitle": "Las dos caras del liderazgo",
+      "cover": "/images/publications/liderazgo.webp",
+      "coverBack": "/images/publications/liderazgo-back.webp",
+      "coverSpine": "/images/publications/liderazgo-spine.webp",
+      "url": "https://canaltrece.com.co/noticias/las-dos-caras-del-liderazgo-jhon-alejandro-linares/"
+    },
+    {
+      "slug": "enlace-digital",
+      "title": "Enlace digital",
+      "description": "Tecnología sin tecnicismos: una guía para acercar la innovación a la vida cotidiana.",
+      "year": "2026",
+      "datePublished": "2026",
+      "buyUrl": "https://www.librerianacional.com/enlace-digital-tecnologia-sin-tecnicismos/p",
+      "authors": [
+        "Alejandro Linares"
+      ],
+      "content": [
+        "Tecnología sin tecnicismos. Publicado por Planeta."
+      ],
+      "spineTitle": "Enlace digital",
+      "cover": "/images/publications/enlace-digital.webp",
+      "coverBack": "/images/publications/enlace-digital-back.webp",
+      "coverSpine": "/images/publications/enlace-digital-spine.webp",
+      "url": "https://canaltrece.com.co/noticias/enlace-digital-libro-conecta-tecnologia/",
+      "publisher": "Planeta"
+    }
+  ],
+  "careerLead": "Abogado y periodista experto en gobernanza digital. Doctorando en Gobierno por la Universidad Católica de Córdoba y magíster en Políticas Públicas por la Universidad Externado de Colombia y Columbia University. Gerente General de Canal Trece Colombia.",
+  "career": [
+    {
+      "id": "2003-mediaciones",
+      "year": "2003",
+      "title": "CEO y Representante Legal",
+      "description": "Derecho a la información y participación ciudadana.",
+      "category": "Cargos",
+      "period": "2003—2009",
+      "institution": "Mediaciones · Primera Liga Universitaria de Usuarios de Medios Informativos en Colombia"
+    },
+    {
+      "id": "2004-corpoinfra",
+      "year": "2004",
+      "title": "Vicepresidente",
+      "description": "Vicepresidencia de CORPOINFRA.",
+      "category": "Cargos",
+      "period": "2004—2010",
+      "institution": "CORPOINFRA"
+    },
+    {
+      "id": "2006-consultorio",
+      "year": "2006",
+      "title": "Asesoría jurídica",
+      "description": "Atención social a población desplazada. Localidad de Bosa, Bogotá.",
+      "category": "Cargos",
+      "period": "2006—2008",
+      "institution": "Consultorio Jurídico · Universidad Autónoma de Colombia"
+    },
+    {
+      "id": "2008-abogado",
+      "year": "2008",
+      "title": "Abogado",
+      "description": "Eximido de preparatorios y becario para especialización. Consultorio jurídico atendiendo población desplazada.",
+      "category": "Formación",
+      "institution": "Universidad Autónoma de Colombia",
+      "image": "/images/career/2008-abogado.webp",
+      "imagePosition": "center 24%",
+      "featured": true
+    },
+    {
+      "id": "2009-derecho-publico",
+      "year": "2009",
+      "title": "Especialización en Derecho Público",
+      "description": "Formación en derecho público.",
+      "category": "Formación",
+      "institution": "Universidad Autónoma de Colombia"
+    },
+    {
+      "id": "2009-ascun",
+      "year": "2009",
+      "title": "Consultor",
+      "description": "Investigación sobre políticas públicas de Coldeportes Nacional en sus cuarenta años.",
+      "category": "Cargos",
+      "institution": "Asociación Colombiana de Universidades · ASCUN"
+    },
+    {
+      "id": "2012-alcalde",
+      "year": "2012",
+      "title": "Alcalde Municipal",
+      "description": "Gestión reconocida por el gobierno nacional, la prensa, la Federación Colombiana de Municipios y Colombia Líder como una de las mejores del país para combatir la pobreza extrema. Administración pionera en gobierno abierto e innovación. Reconocido como uno de los mejores alcaldes de Colombia. Miembro de la Junta Directiva de la CAR y representante de los alcaldes ante el OCAD de Regalías y el Plan Departamental de Aguas.",
+      "category": "Cargos",
+      "period": "2012—2015",
+      "institution": "Municipio de Topaipí, Cundinamarca",
+      "image": "/images/career/2012-alcalde.webp",
+      "imagePosition": "center 34%",
+      "featured": true
+    },
+    {
+      "id": "2016-asuntos-municipales",
+      "year": "2016",
+      "title": "Director de Asuntos Municipales",
+      "description": "Acompañamiento a autoridades municipales mediante ferias de servicios en línea, capacitaciones y creación de la red departamental de concejales «Jueves del Concejal»; generación de la aplicación móvil CUNCEJAP.",
+      "category": "Cargos",
+      "period": "2016",
+      "institution": "Gobernación de Cundinamarca"
+    },
+    {
+      "id": "2019-idaco",
+      "year": "2019",
+      "title": "Gerente IDACO",
+      "description": "Juntas en Línea: programa de digitalización de trámites. Gestión de masificación de las estrategias de participación comunitaria y empoderamiento comunal. Movilización de liderazgos hacia el desarrollo comunitario y acciones de legalidad para la formalización de las juntas de acción comunal.",
+      "category": "Cargos",
+      "period": "2019",
+      "institution": "Instituto Departamental de Acción Comunal · Gobernación de Cundinamarca"
+    },
+    {
+      "id": "2020-gerente-provincial",
+      "year": "2020",
+      "title": "Gerente Provincial",
+      "description": "Gerencia provincial en la Gobernación de Cundinamarca.",
+      "category": "Cargos",
+      "period": "2020—2021",
+      "institution": "Gobernación de Cundinamarca"
+    },
+    {
+      "id": "2020-red-ambiental",
+      "year": "2020",
+      "title": "Presidente",
+      "description": "Presidencia de la Red Ambiental Nacional.",
+      "category": "Cargos",
+      "period": "2020—2022",
+      "institution": "Red Ambiental Nacional"
+    },
+    {
+      "id": "2021-camara",
+      "year": "2021",
+      "title": "Representante a la Cámara",
+      "description": "Representante a la Cámara, Congreso de la República.",
+      "category": "Cargos",
+      "period": "2021—2022",
+      "institution": "Congreso de la República",
+      "image": "/images/career/2021-camara.webp",
+      "imagePosition": "center 22%",
+      "featured": true
+    },
+    {
+      "id": "2022-maestria",
+      "year": "2022",
+      "title": "Maestría en Gobierno y Políticas Públicas",
+      "description": "Tesis de grado: Camino a la Gobernanza Digital.",
+      "category": "Formación",
+      "institution": "Universidad Externado de Colombia · Columbia University",
+      "image": "/images/career/2022-maestria.webp",
+      "imagePosition": "center 24%",
+      "featured": true
+    },
+    {
+      "id": "2022-canal-trece",
+      "year": "2022",
+      "title": "Gerente General",
+      "description": "Gerente General de Canal Trece Colombia. Destacado por la revista Forbes por su modelo de liderazgo inspirador y resultados de gestión.",
+      "category": "Cargos",
+      "period": "2022—2026",
+      "institution": "Canal Trece Colombia",
+      "image": "/images/career/2022-trece.webp",
+      "imagePosition": "center 24%",
+      "ongoing": true,
+      "featured": true
+    },
+    {
+      "id": "2023-doctorado",
+      "year": "2023",
+      "title": "Doctorando en Gobierno",
+      "description": "Investigación: E-Gobernanza: Colombia hacia la Gobernanza Digital.",
+      "category": "Formación",
+      "institution": "Universidad Católica de Córdoba, Argentina",
+      "image": "/images/career/2023-doctorado.webp",
+      "imagePosition": "center 18%",
+      "ongoing": true,
+      "featured": true
+    },
+    {
+      "id": "2024-regimen-electoral",
+      "year": "2024",
+      "title": "Especialización en régimen electoral",
+      "description": "Especialización en régimen electoral.",
+      "category": "Formación",
+      "institution": "Universidad Sergio Arboleda"
+    },
+    {
+      "id": "2024-tic",
+      "year": "2024",
+      "title": "Especialización en regulación de telecomunicaciones, gestión de las TIC y ecosistema digital",
+      "description": "Especialización en regulación de telecomunicaciones, gestión de las TIC y ecosistema digital.",
+      "category": "Formación",
+      "institution": "Universidad Externado de Colombia"
+    },
+    {
+      "id": "2024-atei",
+      "year": "2024",
+      "title": "Miembro de la Junta Directiva",
+      "description": "Miembro de la Junta Directiva de ATEI.",
+      "category": "Cargos",
+      "period": "2024—2026",
+      "institution": "ATEI · Asociación de las Televisiones Educativas y Culturales de Iberoamérica",
+      "ongoing": true,
+      "photo": {
+        "src": "/images/career/2024-atei-tvmorfosis.webp",
+        "alt": "Alejandro Linares sentado entre participantes de un evento en Cajicá. Arriba se leen #tvmorfosis y el logo de ATEI. Abajo hay logos institucionales, entre ellos Canal Trece y la Alcaldía de Cajicá.",
+        "caption": "Participantes sentados en un evento en Cajicá. Se ven logos institucionales, entre ellos #tvmorfosis, ATEI, Canal Trece y la Alcaldía de Cajicá.",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
+      "id": "2024-red-tal",
+      "year": "2024",
+      "title": "Miembro de la Junta Directiva",
+      "description": "Miembro de la Junta Directiva de la Unión de Televisiones de América Latina.",
+      "category": "Cargos",
+      "period": "2024—2025",
+      "institution": "RED TAL · Televisión de América Latina"
+    },
+    {
+      "id": "2024-alta-gerencia",
+      "year": "2024",
+      "title": "Premio Nacional de Alta Gerencia",
+      "description": "Premio Nacional de Alta Gerencia.",
+      "category": "Reconocimientos",
+      "institution": "Departamento Administrativo de la Función Pública"
+    },
+    {
+      "id": "2024-paz-total",
+      "year": "2024",
+      "title": "Galardón La Paz Total",
+      "description": "Galardón La Paz Total.",
+      "category": "Reconocimientos",
+      "institution": "Fenal Prensa"
+    },
+    {
+      "id": "2025-gerente-regional",
+      "year": "2025",
+      "title": "Mejor Gerente de Canal Regional de Colombia",
+      "description": "Mejor Gerente de Canal Regional de Colombia.",
+      "category": "Reconocimientos",
+      "institution": "Organización Gacetas de Colombia y Red de Prensa Colombiana e Internacional"
+    },
+    {
+      "id": "2025-orgullo-colombia",
+      "year": "2025",
+      "title": "Hombre Orgullo de Colombia",
+      "description": "Hombre Orgullo de Colombia.",
+      "category": "Reconocimientos",
+      "institution": "Fundación Reconciliación Futuro Colombia"
+    },
+    {
+      "id": "2025-cinco",
+      "year": "2025",
+      "title": "Reconocimiento Internacional al Aporte Social",
+      "description": "Por el fortalecimiento de la identidad cultural, la inclusión social y la democratización del acceso a la información en el centro del país.",
+      "category": "Reconocimientos",
+      "institution": "Comunidad Internacional de Comunicaciones · CINCO"
+    },
+    {
+      "id": "2025-gacetas",
+      "year": "2025",
+      "title": "Lo Mejor de Nuestro País",
+      "description": "Reconocimiento «Lo Mejor de Nuestro País».",
+      "category": "Reconocimientos",
+      "institution": "Organización Gacetas de Colombia"
+    },
+    {
+      "id": "2025-desinformacion",
+      "year": "2025",
+      "title": "Premio Contra la Desinformación",
+      "description": "Premio Contra la Desinformación.",
+      "category": "Reconocimientos",
+      "institution": "ATEI"
+    },
+    {
+      "id": "2025-regiones",
+      "year": "2025",
+      "title": "Premio Regiones Sin Límites",
+      "description": "Premio Regiones Sin Límites.",
+      "category": "Reconocimientos",
+      "institution": "Ministerio de las TIC"
+    },
+    {
+      "id": "2026-forbes",
+      "year": "2026",
+      "title": "Reconocimiento por liderazgo e innovación en medios públicos",
+      "description": "Reconocimiento de Forbes Colombia por liderazgo e innovación en medios públicos.",
+      "category": "Reconocimientos",
+      "institution": "Forbes Colombia"
+    },
+    {
+      "id": "2026-latam-digital",
+      "year": "2026",
+      "title": "Líderes Digitales de Latinoamérica",
+      "description": "Líderes Digitales de Latinoamérica.",
+      "category": "Reconocimientos",
+      "institution": "Premios LATAM Digital"
+    }
+  ],
+  "projectsLead": "Especiales Enlace Trece — los episodios más cercanos a gobernanza digital, tecnología y ciudadanía — y el archivo completo del canal SoyAlejo4.0.",
+  "projects": [
+    {
+      "id": "LpmvsQHb5Zk",
+      "source": "enlace-trece",
+      "category": "Ciberseguridad",
+      "title": "Ciberseguridad para todos: cómo proteger tu información",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/LpmvsQHb5Zk/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=LpmvsQHb5Zk",
+      "featured": true
+    },
+    {
+      "id": "qKzIO1F_NpU",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "¿La IA está redefiniendo nuestros trabajos?",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/qKzIO1F_NpU/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=qKzIO1F_NpU",
+      "featured": true
+    },
+    {
+      "id": "O1-67wFIgpk",
+      "source": "enlace-trece",
+      "category": "Empleabilidad / sostenibilidad",
+      "title": "Transformación Digital y Empleabilidad",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/O1-67wFIgpk/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=O1-67wFIgpk",
+      "featured": true
+    },
+    {
+      "id": "U6k3eUJ_TIc",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "IA en Colombia: impactos, regulación y seguridad",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/U6k3eUJ_TIc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=U6k3eUJ_TIc",
+      "featured": true
+    },
+    {
+      "id": "icA4gJdNAKY",
+      "source": "enlace-trece",
+      "category": "Ciudadanía digital",
+      "title": "Digitalia: cómo combatir la desinformación en la era digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/icA4gJdNAKY/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=icA4gJdNAKY"
+    },
+    {
+      "id": "VEeSECwkxNo",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "¿Quién Controla el Internet? Un debate sobre IA",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/VEeSECwkxNo/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=VEeSECwkxNo"
+    },
+    {
+      "id": "lYXwa-6uYnc",
+      "source": "enlace-trece",
+      "category": "Democracia",
+      "title": "Tecnología y democracia: elecciones en la era digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/lYXwa-6uYnc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=lYXwa-6uYnc"
+    },
+    {
+      "id": "1rrVwOOh7SE",
+      "source": "enlace-trece",
+      "category": "Democracia",
+      "title": "Tecnología y democracia: Cómo la MOE Vigila las Elecciones",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/1rrVwOOh7SE/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=1rrVwOOh7SE"
+    },
+    {
+      "id": "lDxsOJUb2H4",
+      "source": "enlace-trece",
+      "category": "Transformación digital",
+      "title": "Gobierno electrónico a gobierno inteligente en Argentina",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/lDxsOJUb2H4/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=lDxsOJUb2H4"
+    },
+    {
+      "id": "pRSwkNVT97c",
+      "source": "enlace-trece",
+      "category": "Ciberseguridad",
+      "title": "Ciberseguridad en la era digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/pRSwkNVT97c/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=pRSwkNVT97c"
+    },
+    {
+      "id": "Zq6v2NIgEt8",
+      "source": "enlace-trece",
+      "category": "Ciberseguridad",
+      "title": "Ciberpaz: Conectando a Colombia con la Tecnología",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/Zq6v2NIgEt8/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=Zq6v2NIgEt8"
+    },
+    {
+      "id": "Fiatpoz0bqM",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "Inteligencia Artificial: aplicaciones y desafíos",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/Fiatpoz0bqM/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=Fiatpoz0bqM"
+    },
+    {
+      "id": "5SS4JiYYdww",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "Inteligencia Artificial sin miedo: IA University, formación y futuro",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/5SS4JiYYdww/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=5SS4JiYYdww"
+    },
+    {
+      "id": "HTWKNsGl6qg",
+      "source": "enlace-trece",
+      "category": "Inteligencia artificial",
+      "title": "Brecha digital, inteligencia artificial y futuro TIC en Colombia",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/HTWKNsGl6qg/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=HTWKNsGl6qg"
+    },
+    {
+      "id": "NL6Dh9BdChA",
+      "source": "enlace-trece",
+      "category": "Transformación digital",
+      "title": "Transformación Digital en Colombia: Conectividad",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/NL6Dh9BdChA/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=NL6Dh9BdChA"
+    },
+    {
+      "id": "36BIsP7nPH0",
+      "source": "enlace-trece",
+      "category": "Transformación digital",
+      "title": "Telecomunicaciones en Colombia: 5G, conectividad y futuro digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/36BIsP7nPH0/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=36BIsP7nPH0"
+    },
+    {
+      "id": "V0XQi2HVlF0",
+      "source": "enlace-trece",
+      "category": "Transformación digital",
+      "title": "Transformación Digital desde la Educación en Colombia",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/V0XQi2HVlF0/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=V0XQi2HVlF0"
+    },
+    {
+      "id": "G9sNFBgGX34",
+      "source": "enlace-trece",
+      "category": "Ciudadanía digital",
+      "title": "Educomunicación para la Paz: alfabetización mediática e informacional",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/G9sNFBgGX34/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=G9sNFBgGX34"
+    },
+    {
+      "id": "qHdP8F3OpkM",
+      "source": "enlace-trece",
+      "category": "Tecnología",
+      "title": "Democratizando la tecnología: la competencia digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/qHdP8F3OpkM/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=qHdP8F3OpkM"
+    },
+    {
+      "id": "Sf0QRDhVR9g",
+      "source": "enlace-trece",
+      "category": "Ciberseguridad",
+      "title": "Google abre becas en ciberseguridad e IA en Colombia",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/Sf0QRDhVR9g/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=Sf0QRDhVR9g"
+    },
+    {
+      "id": "mLOlbYGPupM",
+      "source": "enlace-trece",
+      "category": "Ciberseguridad",
+      "title": "TikTok para padres: ¿cómo proteger a tus hijos?",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/mLOlbYGPupM/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=mLOlbYGPupM"
+    },
+    {
+      "id": "PwMLh2swZjg",
+      "source": "enlace-trece",
+      "category": "Medios",
+      "title": "Lanzamiento \"Enlace Digital\" en la FILBo | Jhon Alejandro Linares te invita a la revolución digital",
+      "description": "Especiales Enlace Trece. Canal Trece Colombia.",
+      "image": "https://i.ytimg.com/vi/PwMLh2swZjg/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=PwMLh2swZjg"
+    },
+    {
+      "id": "rZY4DdHe9Xc",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "PROPIEDAD HORIZONTAL",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/rZY4DdHe9Xc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=rZY4DdHe9Xc"
+    },
+    {
+      "id": "TMzhI_UDLTM",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "MERCADOLIBRE",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/TMzhI_UDLTM/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=TMzhI_UDLTM"
+    },
+    {
+      "id": "_Lp2OJAcu_w",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "PROTECCIÓN DE RECURSOS NATURALES",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/_Lp2OJAcu_w/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=_Lp2OJAcu_w"
+    },
+    {
+      "id": "v0CVZLDYI-s",
+      "source": "soyalejo",
+      "category": "Medios",
+      "title": "TECNOLOGÍA EN LA INDUSTRIA AUDIOVISUAL",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/v0CVZLDYI-s/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=v0CVZLDYI-s"
+    },
+    {
+      "id": "C5v5D6iLXbY",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "TICKETMASTER",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/C5v5D6iLXbY/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=C5v5D6iLXbY"
+    },
+    {
+      "id": "pq9Mx1Xgp7w",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "TIENDAS EN LÍNEA Y PREVENCIÓN DE RIESGOS",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/pq9Mx1Xgp7w/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=pq9Mx1Xgp7w"
+    },
+    {
+      "id": "-3Fn2e2H3wo",
+      "source": "soyalejo",
+      "category": "Transformación digital",
+      "title": "BIG DATA",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/-3Fn2e2H3wo/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=-3Fn2e2H3wo"
+    },
+    {
+      "id": "W8ZMM7Slw7w",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "HUAWEI",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/W8ZMM7Slw7w/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=W8ZMM7Slw7w"
+    },
+    {
+      "id": "QDV19cEqT-s",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "AGROTECH",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/QDV19cEqT-s/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=QDV19cEqT-s"
+    },
+    {
+      "id": "8HvgsF4Pfc0",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "EL TDAH Y VIDEOJUEGOS",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/8HvgsF4Pfc0/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=8HvgsF4Pfc0"
+    },
+    {
+      "id": "F9pfGMwxmQ4",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "BITCOIN",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/F9pfGMwxmQ4/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=F9pfGMwxmQ4"
+    },
+    {
+      "id": "dIY93WwddWA",
+      "source": "soyalejo",
+      "category": "Ciberseguridad",
+      "title": "CIBERCRIMEN",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/dIY93WwddWA/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=dIY93WwddWA"
+    },
+    {
+      "id": "atX2dBZwOSg",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "EL CÓDIGO QUE TRANSFORMA LAS EMPRESAS - MULTIPOTENCIALIDAD",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/atX2dBZwOSg/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=atX2dBZwOSg"
+    },
+    {
+      "id": "EgiVRq6PTYw",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "CON TECNOLOGÍA CUIDAMOS EL AGUA",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/EgiVRq6PTYw/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=EgiVRq6PTYw"
+    },
+    {
+      "id": "wiPyd5yU1Xw",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "CÓDIGO CALÍOPE",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/wiPyd5yU1Xw/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=wiPyd5yU1Xw"
+    },
+    {
+      "id": "64QWDeZYP_I",
+      "source": "soyalejo",
+      "category": "Ciudadanía digital",
+      "title": "EL CRITERIO DIGITAL",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/64QWDeZYP_I/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=64QWDeZYP_I"
+    },
+    {
+      "id": "d0tLelU31Ow",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "TECNOLOGÍA APLICADA A LA MODA",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/d0tLelU31Ow/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=d0tLelU31Ow"
+    },
+    {
+      "id": "VLFAk3dzfpE",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "El Valor de Volver a Intentarlo #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/VLFAk3dzfpE/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=VLFAk3dzfpE"
+    },
+    {
+      "id": "3duYH4_1RYM",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Gamificación: Convierte el Trabajo en un Juego #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/3duYH4_1RYM/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=3duYH4_1RYM"
+    },
+    {
+      "id": "M68YLbax3S8",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Invierte en Estudiar Bitcoin Antes Que en Bitcoin #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/M68YLbax3S8/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=M68YLbax3S8"
+    },
+    {
+      "id": "UEXHxc4bH9A",
+      "source": "soyalejo",
+      "category": "Ciberseguridad",
+      "title": "Cuidado con las Estafas de Criptomonedas #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/UEXHxc4bH9A/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=UEXHxc4bH9A"
+    },
+    {
+      "id": "dHE1mbGuhHI",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Bitcoin: Confianza Descentralizada vs. Creadores #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/dHE1mbGuhHI/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=dHE1mbGuhHI"
+    },
+    {
+      "id": "irh5rNFkkdc",
+      "source": "soyalejo",
+      "category": "Inteligencia artificial",
+      "title": "IA vs. Verificación: La Lucha por la Verdad Digital #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/irh5rNFkkdc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=irh5rNFkkdc"
+    },
+    {
+      "id": "bEk4FtcNVAw",
+      "source": "soyalejo",
+      "category": "Ciberseguridad",
+      "title": "Policía Nacional: ¡Denuncia Cibercrimen Fácilmente!",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/bEk4FtcNVAw/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=bEk4FtcNVAw"
+    },
+    {
+      "id": "4utD9POzxqE",
+      "source": "soyalejo",
+      "category": "Ciberseguridad",
+      "title": "Cibercrimen Global: Robo y Fraude desde Cualquier Lugar del Mundo #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/4utD9POzxqE/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=4utD9POzxqE"
+    },
+    {
+      "id": "1MJrPMYeNtQ",
+      "source": "soyalejo",
+      "category": "Ciberseguridad",
+      "title": "Transacciones de WhatsApp: ¿Ciberdelito en Minutos? #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/1MJrPMYeNtQ/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=1MJrPMYeNtQ"
+    },
+    {
+      "id": "qODXlR9eMbU",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Un Río Bogotá Limpio: Un Futuro Merecido #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/qODXlR9eMbU/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=qODXlR9eMbU"
+    },
+    {
+      "id": "BCW3YLqz6wc",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "El río Bogotá: De la pureza a la contaminación #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/BCW3YLqz6wc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=BCW3YLqz6wc"
+    },
+    {
+      "id": "yBrK2W6f598",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Recuperando el Río Bogotá: ¿Es Posible? #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/yBrK2W6f598/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=yBrK2W6f598"
+    },
+    {
+      "id": "K8wLUkHlFb4",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "El Río Bogotá y la Deuda con sus Municipios de La Sabana #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/K8wLUkHlFb4/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=K8wLUkHlFb4"
+    },
+    {
+      "id": "Qq4nSJPJLiU",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Riesgo en Hortalizas de Bogotá: ¿Agua Contaminada? #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/Qq4nSJPJLiU/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=Qq4nSJPJLiU"
+    },
+    {
+      "id": "mBTzzlKtcNw",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Competencia Desleal: Plataformas Digitales vs. Industria Colombiana #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/mBTzzlKtcNw/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=mBTzzlKtcNw"
+    },
+    {
+      "id": "9SwG1HZviao",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Dejando Atrás el Desarrollo: La Montaña del Oso #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/9SwG1HZviao/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=9SwG1HZviao"
+    },
+    {
+      "id": "2e2RTKdeT0s",
+      "source": "soyalejo",
+      "category": "Inteligencia artificial",
+      "title": "¿IA hará tu trabajo? Redefine tu carrera #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/2e2RTKdeT0s/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=2e2RTKdeT0s"
+    },
+    {
+      "id": "cQH_J57Xh18",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "El Error #1 de las Empresas al Buscar Herramientas #shorts",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/cQH_J57Xh18/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=cQH_J57Xh18"
+    },
+    {
+      "id": "PeZhl4g18vc",
+      "source": "soyalejo",
+      "category": "Inteligencia artificial",
+      "title": "China y Colombia: AI transforma ventas y tiempo creativo #colombia #tecnología #innovación  #ia",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/PeZhl4g18vc/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=PeZhl4g18vc"
+    },
+    {
+      "id": "9iYKxGsVJ04",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Colombia Necesita Educación: Más Tiempo, Talentos Monetizados.  #colombia #tecnologia #innovación",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/9iYKxGsVJ04/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=9iYKxGsVJ04"
+    },
+    {
+      "id": "hqtpicAZX48",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Despierta! Tu potencial sin superhéroes. #colombia #tecnologia #innovación",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/hqtpicAZX48/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=hqtpicAZX48"
+    },
+    {
+      "id": "sB_yZqVJoMs",
+      "source": "soyalejo",
+      "category": "Inteligencia artificial",
+      "title": "Turismo Sostenible: Un Empresario Cambia el Juego. #tecnologia #turismo #innovación #ia",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/sB_yZqVJoMs/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=sB_yZqVJoMs"
+    },
+    {
+      "id": "hd7vrWEgEb0",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Viajes Inteligentes: El futuro con el turismo 4.0.  #colombia #tecnologia #turismo #innovación",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/hd7vrWEgEb0/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=hd7vrWEgEb0"
+    },
+    {
+      "id": "JvhCzSVHuEQ",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "#turismo #innovación #tecnologia #colombia",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/JvhCzSVHuEQ/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=JvhCzSVHuEQ"
+    },
+    {
+      "id": "eprUv_XnmGk",
+      "source": "soyalejo",
+      "category": "Inteligencia artificial",
+      "title": "IA en Turismo 🤖🦾 Descubriendo Aves con Inteligencia Artificial. #colombia #tecnologia #turismo",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/eprUv_XnmGk/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=eprUv_XnmGk"
+    },
+    {
+      "id": "od0ccDlbnXI",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Colombia: Atrae Turistas con Tecnología. #colombia #turismo #tecnologia",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/od0ccDlbnXI/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=od0ccDlbnXI"
+    },
+    {
+      "id": "Lroo_IrwlPw",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "Turismo 4.0 #colombia",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/Lroo_IrwlPw/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=Lroo_IrwlPw"
+    },
+    {
+      "id": "rotUDcbdQ1s",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "9 de noviembre de 2025",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/rotUDcbdQ1s/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=rotUDcbdQ1s"
+    },
+    {
+      "id": "X_3roNF3f_A",
+      "source": "soyalejo",
+      "category": "Tecnología",
+      "title": "12 de septiembre de 2025",
+      "description": "Canal oficial SoyAlejo4.0.",
+      "image": "https://i.ytimg.com/vi/X_3roNF3f_A/maxresdefault.jpg",
+      "year": "TODO: validar contenido",
+      "url": "https://www.youtube.com/watch?v=X_3roNF3f_A"
+    }
+  ],
+  "socialWorkLead": "Acompañamiento a personas y comunidades, desde la atención jurídica y la gestión local hasta campañas públicas de Canal Trece.",
+  "socialWork": [
+    {
+      "id": "2026-villamaria",
+      "period": "21 de septiembre de 2026",
+      "title": "Jornada de El Trece Solidario",
+      "place": "Villamaría, Caldas",
+      "summary": "Publicó que, con El Trece Solidario, aliados y voluntades se unieron para llevar bienestar, ayudas y acompañamiento a quienes más lo necesitan. La publicación está situada en Villamaría.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/AlejoLinaresC/posts/1632714634910225"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/villamaria.webp",
+        "width": 960,
+        "height": 1280,
+        "alt": "Alejandro Linares, con chaqueta negra, entrega una bolsa junto a una persona de gorra azul. Alrededor hay cajas y bolsas de mercado.",
+        "layout": "portrait"
+      }
+    },
+    {
+      "id": "2026-solidaridad",
+      "period": "2026",
+      "title": "Trece es Solidaridad",
+      "place": "Canal Trece · Bogotá",
+      "summary": "La recolección abierta tras el terremoto del 10 de agosto continuó con aliados. El comunicado del canal habla de más de 15 organizaciones sumadas para llevar ayuda a las comunidades afectadas, e incluye atención veterinaria para animales de compañía y de producción. Las donaciones se recibieron en la sede de Bogotá hasta el 11 de septiembre de 2026.",
+      "sources": [
+        {
+          "label": "Comunicado de Canal Trece",
+          "href": "https://canaltrece.com.co/wp-content/uploads/2026/08/Comunicado-No.-55-Aliados-Canala-Trece-solidario_.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2026-acopio",
+      "period": "2026",
+      "title": "Centro de acopio por el terremoto",
+      "place": "Canal Trece · Bogotá",
+      "summary": "Como gerente de Canal Trece, convocó un centro de acopio en Bogotá para las comunidades afectadas por el terremoto del 10 de agosto de 2026. La sede recibió alimentos, abrigo, aseo, agua y otros elementos de primera necesidad hasta el 27 de agosto. El 18 de agosto publicó, desde Bogotá, un llamado a donar por Chocó y Pereira junto a los aliados del canal.",
+      "sources": [
+        {
+          "label": "Nota de Canal Trece",
+          "href": "https://canaltrece.com.co/noticias/canal-trece-habilita-centro-de-acopio-por-terremoto-en-colombia/"
+        },
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/photo/?fbid=1603677274480628"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/acopio.webp",
+        "width": 899,
+        "height": 1341,
+        "alt": "Afiche de Trece es Solidaridad que convoca donaciones por Chocó y Pereira en la sede de Canal Trece en Bogotá.",
+        "layout": "poster"
+      }
+    },
+    {
+      "id": "2025-fusagasuga",
+      "period": "21 de diciembre de 2025",
+      "title": "Entrega navideña en Fusagasugá",
+      "place": "Fusagasugá, Sumapaz",
+      "summary": "Publicó que la Navidad se vivió en comunidad en Fusagasugá, capital de la provincia del Sumapaz. En ese texto cuenta que recibieron a cerca de 10.000 personas y entregaron más de 5.800 regalos a los niños, junto a Canal Trece y Bluhartmann.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/AlejoLinaresC/posts/1408668933981464"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/fusagasuga.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Alejandro Linares frente a una multitud bajo una carpa. A los lados hay dos personas con gorras naranjas.",
+        "layout": "wide"
+      }
+    },
+    {
+      "id": "2025-palma-embellecimiento",
+      "period": "15 de diciembre de 2025",
+      "title": "Jornada de embellecimiento en La Palma",
+      "place": "La Palma, Cundinamarca",
+      "summary": "Publicó que, entre risas, esfuerzo y dedicación, tuvieron una jornada de embellecimiento que dejó espacios renovados y esperanza. En la foto aparece pintando un muro junto a un niño.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/photo/?fbid=1403817107799980"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/palma-embellecimiento.webp",
+        "width": 960,
+        "height": 1280,
+        "alt": "Alejandro Linares pinta un muro verde junto a un niño. En el suelo hay un balde y tarros de pintura.",
+        "layout": "portrait"
+      }
+    },
+    {
+      "id": "2025-palma-servicio",
+      "period": "9 de octubre de 2025",
+      "title": "Jornada de servicio en La Palma",
+      "place": "La Palma, Cundinamarca",
+      "summary": "El 9 de octubre de 2025 publicó un recuerdo de una jornada de servicio en La Palma: un día para servir, compartir y estar con la gente. El texto no fecha el día de la jornada. En la foto aparece pintando un muro; en la pared se ve el escudo del municipio.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/photo/?fbid=1349994129848945"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/palma-servicio.webp",
+        "width": 2048,
+        "height": 1534,
+        "alt": "Alejandro Linares pinta un muro con un rodillo de mango largo. A su lado se ve el escudo del municipio de La Palma.",
+        "layout": "wide"
+      }
+    },
+    {
+      "id": "2025-trecepets",
+      "period": "16 de agosto de 2025",
+      "title": "TrecePets",
+      "place": "ExpoPet · Bogotá",
+      "summary": "En ExpoPet presentó TrecePets, la campaña de Canal Trece que conecta a la comunidad con refugios y fundaciones para apoyar la formalización, la adopción y la movilización ciudadana.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/AlejoLinaresC/posts/1305899050925120"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/trecepets.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Conversatorio en un escenario con cubos de Trece. Al fondo, una pantalla rosa muestra un perro. Alejandro Linares está sentado a la derecha.",
+        "layout": "split"
+      }
+    },
+    {
+      "id": "2024-palma",
+      "period": "3 de mayo de 2024",
+      "title": "Trabajo comunitario en La Palma",
+      "place": "La Palma, Cundinamarca",
+      "summary": "Publicó un recuento del trabajo comunitario y social en La Palma: escribió que empezó con un pequeño acto y creció con el apoyo de la comunidad. En la foto aparece con un grupo de niños que llevan uniformes de banda; sobre las mesas hay prendas.",
+      "sources": [
+        {
+          "label": "Publicación en Facebook",
+          "href": "https://www.facebook.com/AlejoLinaresC/posts/pfbid023S5G3DVnuwFPRiUFYqXrEGDNCCWomKP6nGX2EtQantMpJR5BeVevbm7tTrYpDKMfl"
+        }
+      ],
+      "image": {
+        "src": "/images/social-work/palma-banda.webp",
+        "width": 2048,
+        "height": 1534,
+        "alt": "Alejandro Linares, con camiseta azul, posa con un grupo de niños que llevan uniformes de banda roja y negra. Sobre las mesas hay prendas.",
+        "layout": "wide"
+      }
+    },
+    {
+      "id": "2024-regalos",
+      "period": "2024—2025",
+      "title": "Mil regalos, mil sonrisas",
+      "place": "Canal Trece · Región andina",
+      "summary": "Campaña navideña de Canal Trece, bajo su dirección, para recoger regalos destinados a niños de la región andina. En 2024 hubo recorrido por municipios y la recepción estuvo abierta hasta el 16 de diciembre. En 2025 se recibieron juguetes nuevos del 5 al 12 de diciembre en la sede de Bogotá.",
+      "sources": [
+        {
+          "label": "Comunicado 2024",
+          "href": "https://canaltrece.com.co/wp-content/uploads/2024/12/Comunicado-Mil-Sonrisas-1_compressed.pdf"
+        },
+        {
+          "label": "Comunicado 2025",
+          "href": "https://canaltrece.com.co/wp-content/uploads/2025/12/Comunicado-Mil-regalos-mil-sonrisas.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2019-idaco",
+      "period": "2019",
+      "title": "Acción comunal",
+      "place": "IDACO · Gobernación de Cundinamarca",
+      "summary": "Como gerente del Instituto Departamental de Acción Comunal impulsó Juntas en Línea, la digitalización de trámites, y acciones para formalizar las juntas de acción comunal y ampliar la participación comunitaria.",
+      "sources": [
+        {
+          "label": "Ver en trayectoria",
+          "href": "/trayectoria"
+        }
+      ]
+    },
+    {
+      "id": "2016-municipios",
+      "period": "2016",
+      "title": "Ferias de servicios municipales",
+      "place": "Gobernación de Cundinamarca",
+      "summary": "Desde la Dirección de Asuntos Municipales acompañó a las autoridades locales con ferias de servicios en línea, capacitaciones y la red departamental de concejales «Jueves del Concejal».",
+      "sources": [
+        {
+          "label": "Ver en trayectoria",
+          "href": "/trayectoria"
+        }
+      ]
+    },
+    {
+      "id": "2012-topaipi",
+      "period": "2012—2015",
+      "title": "Alcaldía de Topaipí",
+      "place": "Topaipí, Cundinamarca",
+      "summary": "La gestión de su alcaldía fue reconocida por el gobierno nacional, la prensa, la Federación Colombiana de Municipios y Colombia Líder entre las mejores del país para combatir la pobreza extrema.",
+      "sources": [
+        {
+          "label": "Ver en trayectoria",
+          "href": "/trayectoria"
+        }
+      ]
+    },
+    {
+      "id": "2006-bosa",
+      "period": "2006—2008",
+      "title": "Consultorio jurídico",
+      "place": "Bosa, Bogotá",
+      "summary": "Atención social a población desplazada desde el consultorio jurídico de la Universidad Autónoma de Colombia, en la localidad de Bosa.",
+      "sources": [
+        {
+          "label": "Ver en trayectoria",
+          "href": "/trayectoria"
+        }
+      ]
+    }
+  ]
+}

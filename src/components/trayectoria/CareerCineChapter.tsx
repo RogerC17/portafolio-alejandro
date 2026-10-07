@@ -162,6 +162,9 @@ export function CareerCineChapter({
                     </p>
                   ) : null}
                   <p className="career-cine-step-body">{event.description}</p>
+                  {event.photo ? (
+                    <p className="career-cine-step-caption">{event.photo.caption}</p>
+                  ) : null}
                   {event.ongoing ? (
                     <p className="career-cine-step-live">Activo</p>
                   ) : null}

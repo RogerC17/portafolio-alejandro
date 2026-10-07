@@ -1,3 +1,4 @@
+import { siteContent } from "@/content/load"
 import { SITE_NAME } from "@/data/site"
 
 export interface Publication {
@@ -17,7 +18,7 @@ export interface Publication {
   content: string[]
 }
 
-export const publicationsLead = "Este archivo no es un catálogo."
+export const publicationsLead = siteContent.publicationsLead
 
 export function publicationAuthorsLabel(authors: string[]): string {
   if (authors.length <= 1) {
@@ -31,63 +32,7 @@ export function publicationAuthorsLabel(authors: string[]): string {
   return `${authors.slice(0, -1).join(", ")} y ${authors[authors.length - 1]}`
 }
 
-export const publications: Publication[] = [
-  {
-    slug: "tecnologia-real-para-personas-reales",
-    title: "Tecnología real para personas reales",
-    spineTitle: "Tecnología real",
-    description:
-      "El libro de Alejandro Linares sobre la revolución digital centrada en las personas.",
-    year: "2026",
-    datePublished: "2026",
-    cover: "/images/publications/tecnologia.webp",
-    coverBack: "/images/publications/tecnologia-back.webp",
-    coverSpine: "/images/publications/tecnologia-spine.webp",
-    url: "https://www.infobae.com/america/inhouse/2026/08/02/tecnologia-real-para-personas-reales-el-libro-de-alejandro-linares-sobre-la-revolucion-digital-centrada-en-las-personas/",
-    buyUrl:
-      "https://www.librerianacional.com/tecnologia-real-para-personas-reales/p",
-    authors: [SITE_NAME],
-    publisher: "Círculo De Lectores",
-    content: ["Publicado por Círculo De Lectores."],
-  },
-  {
-    slug: "las-dos-caras-del-liderazgo",
-    title: "Las dos caras del liderazgo",
-    spineTitle: "Las dos caras del liderazgo",
-    description: "Libro de Alejandro Linares y Ever Arévalo.",
-    year: "2026",
-    datePublished: "2026",
-    cover: "/images/publications/liderazgo.webp",
-    coverBack: "/images/publications/liderazgo-back.webp",
-    coverSpine: "/images/publications/liderazgo-spine.webp",
-    url: "https://canaltrece.com.co/noticias/las-dos-caras-del-liderazgo-jhon-alejandro-linares/",
-    buyUrl:
-      "https://www.amazon.in/LAS-DOS-CARAS-DEL-LIDERAZGO-ebook/dp/B0H9BQHH8D",
-    authors: [SITE_NAME, "Ever Arévalo"],
-    content: [
-      "Dos visiones, un mismo propósito: formar líderes.",
-      "Un líder no tiene que ser perfecto, pero sí debe estar dispuesto a crecer.",
-    ],
-  },
-  {
-    slug: "enlace-digital",
-    title: "Enlace digital",
-    spineTitle: "Enlace digital",
-    description:
-      "Tecnología sin tecnicismos: una guía para acercar la innovación a la vida cotidiana.",
-    year: "2026",
-    datePublished: "2026",
-    cover: "/images/publications/enlace-digital.webp",
-    coverBack: "/images/publications/enlace-digital-back.webp",
-    coverSpine: "/images/publications/enlace-digital-spine.webp",
-    url: "https://canaltrece.com.co/noticias/enlace-digital-libro-conecta-tecnologia/",
-    buyUrl:
-      "https://www.librerianacional.com/enlace-digital-tecnologia-sin-tecnicismos/p",
-    authors: [SITE_NAME],
-    publisher: "Planeta",
-    content: ["Tecnología sin tecnicismos. Publicado por Planeta."],
-  },
-]
+export const publications: Publication[] = siteContent.publications as Publication[]
 
 const publicationsBySlug = new Map(
   publications.map((publication) => [publication.slug, publication]),

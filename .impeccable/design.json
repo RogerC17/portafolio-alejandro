@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T17:40:00.000Z",
+  "title": "Design System: Alejandro Linares",
+  "extensions": {
+    "colorMeta": {
+      "archive-gold": {
+        "role": "primary",
+        "displayName": "Oro de archivo",
+        "canonical": "oklch(73.7% 0.101 82.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.101 82.7)",
+          "oklch(26.4% 0.101 82.7)",
+          "oklch(37.9% 0.101 82.7)",
+          "oklch(49.3% 0.101 82.7)",
+          "oklch(60.7% 0.101 82.7)",
+          "oklch(72.1% 0.101 82.7)",
+          "oklch(83.6% 0.101 82.7)",
+          "oklch(95.0% 0.101 82.7)"
+        ]
+      },
+      "archive-gold-hover": {
+        "role": "primary",
+        "displayName": "Oro claro",
+        "canonical": "oklch(78.7% 0.099 84.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 84.9)",
+          "oklch(26.4% 0.099 84.9)",
+          "oklch(37.9% 0.099 84.9)",
+          "oklch(49.3% 0.099 84.9)",
+          "oklch(60.7% 0.099 84.9)",
+          "oklch(72.1% 0.099 84.9)",
+          "oklch(83.6% 0.099 84.9)",
+          "oklch(95.0% 0.099 84.9)"
+        ]
+      },
+      "alert-rose": {
+        "role": "tertiary",
+        "displayName": "Rosa de alerta",
+        "canonical": "oklch(81.2% 0.062 18.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.062 18.5)",
+          "oklch(26.4% 0.062 18.5)",
+          "oklch(37.9% 0.062 18.5)",
+          "oklch(49.3% 0.062 18.5)",
+          "oklch(60.7% 0.062 18.5)",
+          "oklch(72.1% 0.062 18.5)",
+          "oklch(83.6% 0.062 18.5)",
+          "oklch(95.0% 0.062 18.5)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Filete",
+        "canonical": "oklch(29.2% 0.005 248.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 248.0)",
+          "oklch(26.4% 0.005 248.0)",
+          "oklch(37.9% 0.005 248.0)",
+          "oklch(49.3% 0.005 248.0)",
+          "oklch(60.7% 0.005 248.0)",
+          "oklch(72.1% 0.005 248.0)",
+          "oklch(83.6% 0.005 248.0)",
+          "oklch(95.0% 0.005 248.0)"
+        ]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Filete marcado",
+        "canonical": "oklch(41.9% 0.008 255.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 255.5)",
+          "oklch(26.4% 0.008 255.5)",
+          "oklch(37.9% 0.008 255.5)",
+          "oklch(49.3% 0.008 255.5)",
+          "oklch(60.7% 0.008 255.5)",
+          "oklch(72.1% 0.008 255.5)",
+          "oklch(83.6% 0.008 255.5)",
+          "oklch(95.0% 0.008 255.5)"
+        ]
+      },
+      "rail-wash": {
+        "role": "neutral",
+        "displayName": "Lavado del riel",
+        "canonical": "oklch(25.9% 0.005 248.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 248.0)",
+          "oklch(26.4% 0.005 248.0)",
+          "oklch(37.9% 0.005 248.0)",
+          "oklch(49.3% 0.005 248.0)",
+          "oklch(60.7% 0.005 248.0)",
+          "oklch(72.1% 0.005 248.0)",
+          "oklch(83.6% 0.005 248.0)",
+          "oklch(95.0% 0.005 248.0)"
+        ]
+      },
+      "preview-well": {
+        "role": "neutral",
+        "displayName": "Pozo de previsualización",
+        "canonical": "oklch(15.8% 0.003 248.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 248.0)",
+          "oklch(26.4% 0.003 248.0)",
+          "oklch(37.9% 0.003 248.0)",
+          "oklch(49.3% 0.003 248.0)",
+          "oklch(60.7% 0.003 248.0)",
+          "oklch(72.1% 0.003 248.0)",
+          "oklch(83.6% 0.003 248.0)",
+          "oklch(95.0% 0.003 248.0)"
+        ]
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "instant-state",
+        "value": "none",
+        "purpose": "El color de los controles cambia al instante. Con prefers-reduced-motion el scroll queda en el comportamiento automático del navegador."
+      }
+    ],
+    "breakpoints": [
+      { "name": "panel-stack", "value": "1023px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Entrar / Guardar",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Marca de oro del panel: Entrar en el login y Guardar en la barra.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Guardar</button>",
+      "css": ".ds-btn-primary { background: #c9a45c; color: #101112; min-height: 2.75rem; border: 0; border-radius: 0.25rem; padding: 0 1.15rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; } .ds-btn-primary:hover { background: #d7b56d; } .ds-btn-primary:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Guardado",
+      "kind": "button",
+      "refersTo": "button-save-saved",
+      "description": "Guardar asentado: fondo marfil y etiqueta Guardado.",
+      "html": "<button class=\"ds-btn-saved\" type=\"button\">Guardado</button>",
+      "css": ".ds-btn-saved { background: #f2f0e9; color: #101112; min-height: 2.75rem; border: 0; border-radius: 0.25rem; padding: 0 1.15rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; } .ds-btn-saved:hover { background: #f2f0e9; } .ds-btn-saved:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Salir",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acción secundaria del riel, con filete y sin relleno.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Salir</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #f2f0e9; min-height: 2.75rem; border: 1px solid #2a2c2e; border-radius: 0.25rem; padding: 0 0.75rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 400; cursor: pointer; } .ds-btn-ghost:hover { border-color: #4a4d51; } .ds-btn-ghost:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Quitar",
+      "kind": "button",
+      "refersTo": "button-tool",
+      "description": "Herramienta de ficha. Al pasar el cursor toma la rosa de alerta.",
+      "html": "<button class=\"ds-btn-tool\" type=\"button\">Quitar</button>",
+      "css": ".ds-btn-tool { background: transparent; color: #f2f0e9; min-height: 2.75rem; border: 1px solid #2a2c2e; border-radius: 0.25rem; padding: 0 0.7rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 400; cursor: pointer; } .ds-btn-tool:hover { border-color: #e7b2b2; color: #e7b2b2; } .ds-btn-tool:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Etiqueta muted sobre un campo de grafito con filete.",
+      "html": "<label class=\"ds-field\"><span>Usuario</span><input type=\"text\" value=\"\"></label>",
+      "css": ".ds-field { display: grid; gap: 0.35rem; font-family: Archivo, \"Segoe UI\", sans-serif; color: #f2f0e9; } .ds-field span { color: #9a9a9a; font-size: 0.82rem; } .ds-field input { width: 16rem; min-height: 2.75rem; padding: 0.65rem 0.75rem; background: #101112; color: #f2f0e9; border: 1px solid #2a2c2e; border-radius: 0.25rem; font: inherit; } .ds-field input:hover { border-color: #4a4d51; } .ds-field input:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Riel de secciones",
+      "kind": "nav",
+      "refersTo": "button-nav-current",
+      "description": "Lista del escritorio. La sección activa va en oro; el resto, en lavado al pasar el cursor.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Secciones\"><button class=\"ds-nav is-current\" type=\"button\" aria-current=\"page\">Sitio</button><button class=\"ds-nav\" type=\"button\">Portada</button></nav>",
+      "css": ".ds-rail { display: grid; gap: 0.25rem; width: 15.5rem; padding: 1rem; background: #161719; } .ds-nav { min-height: 2.75rem; border: 1px solid transparent; border-radius: 0.25rem; background: transparent; color: #f2f0e9; text-align: left; padding: 0 0.75rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 400; cursor: pointer; } .ds-nav:hover { background: #222426; } .ds-nav.is-current, .ds-nav.is-current:hover { background: #c9a45c; color: #101112; font-weight: 600; } .ds-nav:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Archivo",
+      "kind": "custom",
+      "description": "La única aparición de Newsreader: la palabra Archivo.",
+      "html": "<p class=\"ds-wordmark\">Archivo</p>",
+      "css": ".ds-wordmark { margin: 0; font-family: Newsreader, Georgia, serif; font-size: 2.4rem; font-weight: 500; line-height: 1; letter-spacing: -0.03em; color: #f2f0e9; }"
+    },
+    {
+      "name": "Ficha",
+      "kind": "custom",
+      "description": "Registro separado por filete superior, sin tarjeta ni radio propio.",
+      "html": "<article class=\"ds-record\"><button class=\"ds-record-toggle\" type=\"button\"><span class=\"ds-record-title\">Título de la ficha</span><span class=\"ds-record-meta\">2024</span></button></article>",
+      "css": ".ds-record { border-top: 1px solid #2a2c2e; padding: 0.85rem 0 1rem; font-family: Archivo, \"Segoe UI\", sans-serif; } .ds-record-toggle { min-height: 2.75rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; padding: 0.35rem 0; border: 0; background: transparent; color: #f2f0e9; text-align: left; cursor: pointer; } .ds-record-title { font-weight: 500; } .ds-record-meta { color: #9a9a9a; font-size: 0.85rem; } .ds-record-toggle:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Barra de guardado",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Barra fija: nota de publicación a la izquierda y Guardar a la derecha.",
+      "html": "<div class=\"ds-savebar\"><p>El sitio en este equipo se actualiza al recargar. GoDaddy cambia cuando se publica la exportación.</p><button class=\"ds-save\" type=\"button\">Guardar</button></div>",
+      "css": ".ds-savebar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.85rem 2rem; background: color-mix(in srgb, #161719 92%, transparent); border-top: 1px solid #2a2c2e; backdrop-filter: blur(10px); } .ds-savebar p { margin: 0; color: #9a9a9a; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 0.85rem; max-width: 42rem; } .ds-save { background: #c9a45c; color: #101112; min-height: 2.75rem; border: 0; border-radius: 0.25rem; padding: 0 1.15rem; font-family: Archivo, \"Segoe UI\", sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; } .ds-save:hover { background: #d7b56d; } .ds-save:focus-visible { outline: 2px solid #f2f0e9; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El escritorio de archivo",
+    "overview": "El panel local es el mismo grafito del archivo, usado para corregir fichas que ya existen. Es un escritorio con riel, formulario y una sola acción de asentamiento. La densidad es de formulario. Quien entra lee «Archivo» en serif, escribe dos campos y pulsa Entrar.\n\nEl oro es una marca. La sección activa, Entrar y Guardar lo llevan; el resto permanece en marfil, gris y filete. Newsreader no baja de esa única palabra. Al guardar, el botón deja el oro y se asienta en marfil con la etiqueta «Guardado». La nota fija recuerda que GoDaddy cambia solo cuando se publica la exportación.\n\nEstas secciones documentan el panel local. El sistema del sitio público sigue en las secciones 1 a 40. Grafito, surface, marfil y muted siguen siendo los de la paleta ya escrita.",
+    "keyCharacteristics": [
+      "Escritorio de fichas.",
+      "Oro solo en la sección activa, Entrar y Guardar.",
+      "Archivo en etiquetas y campos; Newsreader solo en la palabra Archivo.",
+      "Riel en escritorio, selector en móvil, Guardar anclado abajo.",
+      "Profundidad tonal: filete, surface y barra esmerilada."
+    ],
+    "rules": [
+      {
+        "name": "The Mark of Gold Rule",
+        "body": "En el panel, el oro solo pinta la sección activa, Entrar y Guardar. Un campo, un lede o un botón de herramienta en oro rompe la marca.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Serif Word Rule",
+        "body": "Newsreader se reserva para la palabra Archivo. Títulos de sección, etiquetas y valores permanecen en Archivo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Anchored Save Rule",
+        "body": "Guardar no se desplaza con el formulario. En escritorio queda abajo a la derecha; bajo 1023px, a todo el ancho, con la nota de publicación encima.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Desk Rule",
+        "body": "Si hace falta profundidad, se cambia el tono o se esmerila la barra. No se añade box-shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reutilizar grafito, surface, marfil y muted de la sección 5 sin redefinirlos.",
+      "Do reservar el oro de archivo para la sección activa, Entrar y Guardar, y asentar Guardar en marfil cuando el estado es «Guardado».",
+      "Do mantener Newsreader en la palabra Archivo y Archivo en etiquetas, campos y títulos de sección.",
+      "Do anclar la barra de guardado y, bajo 1023px, cambiar el riel por el selector."
+    ],
+    "donts": [
+      "Don't pintar de oro campos, ledes, herramientas o el fondo del riel.",
+      "Don't usar Newsreader fuera de la palabra Archivo en este panel.",
+      "Don't añadir tarjetas de resumen, un menú numerado ni un control que cree secciones o cambie la maqueta pública.",
+      "Don't proyectar sombras. La profundidad del panel es tonal y el desenfoque de la barra."
+    ]
+  }
+}

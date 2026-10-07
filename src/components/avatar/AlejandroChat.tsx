@@ -221,7 +221,7 @@ export function AlejandroChat() {
               placeholder="Escribe tu pregunta"
               autoComplete="off"
             />
-            <button type="submit" className="avatar-send">
+            <button type="submit" className="avatar-send" disabled={!draft.trim()}>
               Enviar
             </button>
           </form>

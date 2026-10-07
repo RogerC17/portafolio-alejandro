@@ -1,4 +1,5 @@
 import { CareerTimeline } from "@/components/home/CareerTimeline"
+import { SocialWork } from "@/components/home/SocialWork"
 import { ContactCTA } from "@/components/home/ContactCTA"
 import { FeaturedProjects } from "@/components/home/FeaturedProjects"
 import { FocusAreas } from "@/components/home/FocusAreas"
@@ -16,6 +17,7 @@ export default function Home() {
       <Press />
       <FeaturedProjects />
       <CareerTimeline />
+      <SocialWork />
       <FocusAreas />
       <ContactCTA />
     </main>

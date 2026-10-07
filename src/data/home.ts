@@ -1,7 +1,8 @@
+import { siteContent } from "@/content/load"
+
 export const HERO_NAME_LINES = ["ALEJANDRO", "LINARES"] as const
 
-export const HERO_LEAD =
-  "Creo en el poder de la tecnología y las instituciones para generar oportunidades reales en la vida de las personas."
+export const HERO_LEAD = siteContent.home.heroLead
 
 export const HERO_METADATA = [
   "BOGOTÁ / COLOMBIA",
@@ -44,10 +45,7 @@ export const HERO_MEDIA = {
   height: 1008,
 } as const
 
-export const MANIFESTO_QUOTE_LINES = [
-  "La tecnología no transforma sociedades.",
-  "Las personas que saben utilizarla, sí.",
-] as const
+export const MANIFESTO_QUOTE_LINES = siteContent.home.manifestoLines
 
 export const MANIFESTO_AXES = [
   { label: "ESTADO", href: "#areas" },
@@ -58,8 +56,7 @@ export const MANIFESTO_AXES = [
   { label: "TRANSFORMACIÓN" },
 ] as const
 
-export const MANIFESTO_SUPPORT =
-  "Cuenta con una sólida formación académica que incluye un doctorando en Gobierno y una maestría en Políticas Públicas. Es director del programa de tecnología más visto en formatos digitales, Especiales Enlace Trece, ha entrevistado destacados expertos del universo tecnológico, acercando la tecnología a los ciudadanos."
+export const MANIFESTO_SUPPORT = siteContent.home.manifestoSupport
 
 export {
   contactCta as CONTACT_CTA,
